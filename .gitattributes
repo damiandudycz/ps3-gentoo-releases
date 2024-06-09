@@ -1,0 +1,2 @@
+23.0-default/*.iso filter=lfs diff=lfs merge=lfs -text
+23.0-default/*.tar.xz filter=lfs diff=lfs merge=lfs -text
