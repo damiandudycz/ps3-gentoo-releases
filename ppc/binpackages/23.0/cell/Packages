@@ -11,9 +11,9 @@ FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs binpkg-mul
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: abi_ppc_64 prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 754
+PACKAGES: 778
 PROFILE: default/linux/ppc64/23.0/desktop
-TIMESTAMP: 1719404719
+TIMESTAMP: 1719414572
 USE: X a52 aac acl ada_target_gcc_12 alsa apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias big-endian bindist bluetooth branding bzip2 cairo calligra_features_karbon calligra_features_sheets calligra_features_words cdda cdr collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog cpu_flags_ppc_altivec crypt cups dbus dri dts dvd dvdr elibc_glibc elogind encode exif flac gdbm gif gpm gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gtk gui ibm iconv icu input_devices_evdev input_devices_libinput ipv6 jpeg kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_text lcms libnotify lua_single_target_lua5-1 lua_targets_lua5-1 mad mng mp3 mp4 mpeg ncurses nls office_implementation_libreoffice ogg opengl openmp pam pango pcre pdf php_targets_php8-2 png policykit postgres_targets_postgres15 ppc64 ppds ps3 python_single_target_python3_12 python_targets_python3_12 qt5 readline ruby_targets_ruby31 ruby_targets_ruby32 sdl seccomp sound spell ssl startup-notification svg test-rust tiff truetype udev udisks unicode upower usb video_cards_dummy video_cards_fbdev video_cards_mga video_cards_r128 video_cards_radeon vorbis vulkan wayland wayland-compositor wxwidgets x264 xattr xcb xft xml xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_sysrq xtables_addons_tarpit xv xvid xwayland zlib
 USE_EXPAND: ABI_MIPS ABI_S390 ABI_X86 ADA_TARGET ALSA_CARDS AMDGPU_TARGETS APACHE2_MODULES APACHE2_MPMS CALLIGRA_FEATURES CAMERAS COLLECTD_PLUGINS CPU_FLAGS_ARM CPU_FLAGS_PPC CPU_FLAGS_X86 CURL_SSL ELIBC FFTOOLS GPSD_PROTOCOLS GRUB_PLATFORMS INPUT_DEVICES KERNEL L10N LCD_DEVICES LIBREOFFICE_EXTENSIONS LLVM_SLOT LLVM_TARGETS LUA_SINGLE_TARGET LUA_TARGETS MONKEYD_PLUGINS NGINX_MODULES_HTTP NGINX_MODULES_MAIL NGINX_MODULES_STREAM OFFICE_IMPLEMENTATION OPENMPI_FABRICS OPENMPI_OFED_FEATURES OPENMPI_RM PERL_FEATURES PHP_TARGETS POSTGRES_TARGETS PYTHON_SINGLE_TARGET PYTHON_TARGETS QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS RUBY_TARGETS SANE_BACKENDS UWSGI_PLUGINS VIDEO_CARDS VOICEMAIL_STORAGE XTABLES_ADDONS
 USE_EXPAND_HIDDEN: ABI_MIPS ABI_S390 ABI_X86 CPU_FLAGS_ARM CPU_FLAGS_X86 ELIBC KERNEL
@@ -986,6 +986,29 @@ SIZE: 665600
 SLOT: 0/1
 USE: elibc_glibc kernel_linux lzma ppc64 zlib
 MTIME: 1718041722
+REPO: gentoo
+
+BDEPEND: >=dev-util/intltool-0.50 dev-util/itstool >=dev-build/gtk-doc-am-1.12 sys-devel/gettext virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils
+BUILD_ID: 1
+BUILD_TIME: 1719410439
+CPV: app-cdr/brasero-3.12.3
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+DEPEND: >=dev-libs/glib-2.29.14:2 >=x11-libs/gtk+-3:3[introspection] media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 >=dev-libs/libxml2-2.6:2 >=x11-libs/libnotify-0.6.1:0/0= media-libs/libcanberra[gtk3] x11-libs/libICE x11-libs/libSM >=dev-libs/gobject-introspection-1.30:0/0= >=dev-libs/libburn-0.4:0/0= >=dev-libs/libisofs-0.6.4:0/0= dev-util/desktop-file-utils x11-misc/shared-mime-info
+EAPI: 7
+IUSE: +css +introspection +libburn mp3 nautilus playlist tracker
+KEYWORDS: amd64 ~arm arm64 ~loong ppc ppc64 ~riscv x86
+LICENSE: GPL-2+ CC-BY-SA-3.0
+MD5: 93077ba233b4730c38d12a6d77937c0d
+PATH: app-cdr/brasero/brasero-3.12.3-1.gpkg.tar
+PDEPEND: gnome-base/gvfs
+PROVIDES: ppc_64: libbrasero-audio2cue.so libbrasero-burn-uri.so libbrasero-burn3.so.1 libbrasero-checksum-file.so libbrasero-checksum.so libbrasero-dvdauthor.so libbrasero-dvdcss.so libbrasero-libburn.so libbrasero-libisofs.so libbrasero-local-track.so libbrasero-media3.so.1 libbrasero-normalize.so libbrasero-transcode.so libbrasero-utils3.so.1 libbrasero-vcdimager.so libbrasero-vob.so
+RDEPEND: >=dev-libs/glib-2.29.14:2 >=x11-libs/gtk+-3:3[introspection] media-libs/gstreamer:1.0 media-libs/gst-plugins-base:1.0 >=dev-libs/libxml2-2.6:2 >=x11-libs/libnotify-0.6.1:0/0= media-libs/libcanberra[gtk3] x11-libs/libICE x11-libs/libSM >=dev-libs/gobject-introspection-1.30:0/0= >=dev-libs/libburn-0.4:0/0= >=dev-libs/libisofs-0.6.4:0/0= media-libs/gst-plugins-good:1.0 media-plugins/gst-plugins-meta:1.0[mp3] x11-themes/hicolor-icon-theme media-libs/libdvdcss:1.2 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libburn.so.4 libc.so.6 libcairo.so.2 libcanberra-gtk3.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgstpbutils-1.0.so.0 libgstreamer-1.0.so.0 libgstvideo-1.0.so.0 libgthread-2.0.so.0 libgtk-3.so.0 libisofs.so.6 libm.so.6 libnotify.so.4 libpango-1.0.so.0 libpangocairo-1.0.so.0 libxml2.so.2
+SHA1: cb83eedccf5824bfac3917ebebaf35a6f7d5a495
+SIZE: 3317760
+SLOT: 0/3.1
+USE: css elibc_glibc introspection kernel_linux libburn mp3 ppc64
+MTIME: 1719410457
 REPO: gentoo
 
 BUILD_ID: 1
@@ -3321,6 +3344,28 @@ REPO: gentoo
 
 BDEPEND: dev-lang/vala:0.56[vapigen(+)] app-alternatives/ninja >=dev-build/cmake-3.20.5
 BUILD_ID: 1
+BUILD_TIME: 1719408763
+CPV: dev-libs/libayatana-appindicator-0.5.92
+DEFINED_PHASES: compile configure install prepare test
+DEPEND: >=dev-libs/glib-2.37:2 >=x11-libs/gtk+-3.24:3[introspection] dev-libs/libdbusmenu[gtk3] >=dev-libs/libayatana-indicator-0.8.4
+EAPI: 8
+IUSE: test test
+KEYWORDS: amd64 ~arm arm64 ~loong ppc ppc64 ~riscv ~sparc x86
+LICENSE: GPL-3 LGPL-2 LGPL-3
+MD5: 9381b275aa38d09a0e50bcf3cec00d6c
+PATH: dev-libs/libayatana-appindicator/libayatana-appindicator-0.5.92-1.gpkg.tar
+PROVIDES: ppc_64: libayatana-appindicator3.so.1
+RDEPEND: >=dev-libs/glib-2.37:2 >=x11-libs/gtk+-3.24:3[introspection] dev-libs/libdbusmenu[gtk3] >=dev-libs/libayatana-indicator-0.8.4 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libayatana-indicator3.so.7 libc.so.6 libdbusmenu-glib.so.4 libdbusmenu-gtk3.so.4 libgdk-3.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0
+RESTRICT: test test
+SHA1: ae9c6961cfd5a0638f8ef1ceeadf532547e11428
+SIZE: 122880
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1719408773
+REPO: gentoo
+
+BDEPEND: dev-lang/vala:0.56[vapigen(+)] app-alternatives/ninja >=dev-build/cmake-3.20.5
+BUILD_ID: 1
 BUILD_TIME: 1719379000
 CPV: dev-libs/libayatana-indicator-0.9.3
 DEFINED_PHASES: compile configure install prepare test
@@ -3448,6 +3493,28 @@ SIZE: 133120
 SLOT: 0/2
 USE: cxx elibc_glibc kernel_linux ppc64
 MTIME: 1719369867
+REPO: gentoo
+
+BDEPEND: dev-util/glib-utils dev-util/intltool sys-devel/gettext virtual/pkgconfig dev-lang/vala:0.56[vapigen(+)] >=app-portage/elt-patches-20240116 sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
+BUILD_ID: 1
+BUILD_TIME: 1719408464
+CPV: dev-libs/libdbusmenu-16.04.0-r2
+DEFINED_PHASES: compile configure install preinst prepare test
+DEPEND: >=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.35.4 dev-libs/libxml2 x11-libs/gtk+:2[introspection] >=x11-libs/gtk+-3.2:3[introspection] >=dev-libs/gobject-introspection-1
+EAPI: 8
+IUSE: debug gtk gtk3 +introspection test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc x86
+LICENSE: LGPL-2.1 LGPL-3
+MD5: cb063519c5cf1a37d0f5382c02baa465
+PATH: dev-libs/libdbusmenu/libdbusmenu-16.04.0-r2-1.gpkg.tar
+PROVIDES: ppc_64: libdbusmenu-glib.so.4 libdbusmenu-gtk.so.4 libdbusmenu-gtk3.so.4
+RDEPEND: >=dev-libs/dbus-glib-0.100 >=dev-libs/glib-2.35.4 dev-libs/libxml2 x11-libs/gtk+:2[introspection] >=x11-libs/gtk+-3.2:3[introspection] >=dev-libs/gobject-introspection-1 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libatk-1.0.so.0 libc.so.6 libgdk-3.so.0 libgdk-x11-2.0.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgtk-x11-2.0.so.0 libpango-1.0.so.0
+RESTRICT: test
+SHA1: c172e6a6d53cce3c6d0f109429ff59ddd4f2fef7
+SIZE: 235520
+USE: elibc_glibc gtk gtk3 introspection kernel_linux ppc64
+MTIME: 1719408475
 REPO: gentoo
 
 BDEPEND: || ( dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
@@ -7854,6 +7921,29 @@ USE: elibc_glibc gnutls kernel_linux mta nls ppc64 ssl
 MTIME: 1719379550
 REPO: gentoo
 
+BDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/glib-2.58.1:2 >=dev-libs/libxml2-2.4.7:2 gnome-base/dconf >=gnome-base/gvfs-1.10.1:0[udisks] >=mate-base/mate-desktop-1.28.0 >=media-libs/libexif-0.6.14:0 virtual/libintl x11-libs/cairo >=x11-libs/gdk-pixbuf-2.36.5:2 >=x11-libs/gtk+-3.22:3[introspection] >=x11-libs/libnotify-0.7.0:0 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXft x11-libs/libXrender >=x11-libs/pango-1.1.2 >=dev-libs/gobject-introspection-0.6.4:0/0= >=dev-lang/perl-5:0/5.38= dev-util/gdbus-codegen dev-util/glib-utils dev-util/gtk-doc dev-build/gtk-doc-am >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719410161
+CPV: mate-base/caja-1.28.0-r1
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare test
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: +introspection +mate nls xmp
+KEYWORDS: ~amd64 ~arm ~arm64 ~loong ~riscv ~x86
+LICENSE: GPL-2+ LGPL-2+
+MD5: 40426fa47f984bceeae5e85926bb4c0a
+PATH: mate-base/caja/caja-1.28.0-r1-1.gpkg.tar
+PDEPEND: >=x11-themes/mate-icon-theme-1.28
+PROVIDES: ppc_64: libcaja-extension.so.1
+RDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/glib-2.58.1:2 >=dev-libs/libxml2-2.4.7:2 gnome-base/dconf >=gnome-base/gvfs-1.10.1:0[udisks] >=mate-base/mate-desktop-1.28.0 >=media-libs/libexif-0.6.14:0 virtual/libintl x11-libs/cairo >=x11-libs/gdk-pixbuf-2.36.5:2 >=x11-libs/gtk+-3.22:3[introspection] >=x11-libs/libnotify-0.7.0:0 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXft x11-libs/libXrender >=x11-libs/pango-1.1.2 >=dev-libs/gobject-introspection-0.6.4:0/0= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libexif.so.12 libgailutil-3.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgtk-layer-shell.so.0 libm.so.6 libmate-desktop-2.so.17 libnotify.so.4 libpango-1.0.so.0 libpangocairo-1.0.so.0 libxml2.so.2
+RESTRICT: test
+SHA1: 6341e744401e6a052c4c772c21f22f8f4ca64cd2
+SIZE: 4966400
+USE: elibc_glibc introspection kernel_linux mate nls ppc64
+MTIME: 1719410178
+REPO: gentoo
+
 BDEPEND: dev-util/glib-utils >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
 BUILD_ID: 1
 BUILD_TIME: 1719389435
@@ -7878,6 +7968,61 @@ MTIME: 1719389460
 REPO: gentoo
 
 BUILD_ID: 1
+BUILD_TIME: 1719414560
+CPV: mate-base/mate-1.28.0
+DEFINED_PHASES: postinst
+EAPI: 8
+IUSE: +base bluetooth help +notification +themes +extras
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: metapackage
+MD5: fdbf8f3f6bbc389773eb8de9ebdbaa86
+PATH: mate-base/mate/mate-1.28.0-1.gpkg.tar
+PDEPEND: =x11-misc/mate-notification-daemon-1.28* virtual/notification-daemon:0
+RDEPEND: =mate-base/mate-desktop-1.28* =mate-base/mate-menus-1.28* =mate-base/mate-panel-1.28* =mate-base/mate-session-manager-1.28* =mate-base/mate-settings-daemon-1.28* =x11-wm/marco-1.28* =mate-base/caja-1.28* =mate-base/mate-applets-meta-1.28* =mate-base/mate-control-center-1.28* =mate-extra/mate-media-1.28* =x11-misc/mozo-1.28* =x11-terms/mate-terminal-1.28* net-wireless/blueman =x11-themes/mate-backgrounds-1.28* =x11-themes/mate-icon-theme-1.28* =x11-themes/mate-themes-3* =app-arch/engrampa-1.28* =app-editors/pluma-1.28* =app-text/atril-1.28* =mate-extra/caja-extensions-1.28* =mate-extra/mate-calc-1.28* =mate-extra/mate-power-manager-1.28* =mate-extra/mate-screensaver-1.28* =mate-extra/mate-system-monitor-1.28* =mate-extra/mate-utils-1.28* =media-gfx/eom-1.28*
+SHA1: bff8b9188de7fa684c6799707ee681e511e06d11
+SIZE: 20480
+USE: base bluetooth elibc_glibc extras kernel_linux notification ppc64 themes
+MTIME: 1719414570
+REPO: gentoo
+
+BDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/dbus-glib-0.74 >=dev-libs/glib-2.50:2 >=dev-libs/libmateweather-1.28.0 >=dev-libs/libxml2-2.5:2 >=gnome-base/libgtop-2.12.0:2/11= >=gnome-extra/gucharmap-3.0:2.90 >=mate-base/mate-panel-1.28.0 >=net-wireless/wireless-tools-28_pre9:0 >=sys-apps/dbus-1.10.0 x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/gtksourceview:4 >=x11-libs/libnotify-0.7 x11-libs/libX11 >=x11-libs/libwnck-3.0:3 x11-libs/pango sys-power/cpupower >=sys-auth/polkit-0.97:0 >=sys-power/upower-0.99.8 app-text/docbook-xml-dtd:4.3 app-text/rarian app-text/yelp-tools dev-libs/libxslt >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719414131
+CPV: mate-base/mate-applets-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare test
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: X +cpupower netlink policykit +upower
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: CC-BY-SA-3.0 FDL-1.1+ GPL-2+ GPL-3+ LGPL-2+
+MD5: 6d9f0358c10fbc24883861801a205eef
+PATH: mate-base/mate-applets/mate-applets-1.28.0-1.gpkg.tar
+RDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/dbus-glib-0.74 >=dev-libs/glib-2.50:2 >=dev-libs/libmateweather-1.28.0 >=dev-libs/libxml2-2.5:2 >=gnome-base/libgtop-2.12.0:2/11= >=gnome-extra/gucharmap-3.0:2.90 >=mate-base/mate-panel-1.28.0 >=net-wireless/wireless-tools-28_pre9:0 >=sys-apps/dbus-1.10.0 x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/gtksourceview:4 >=x11-libs/libnotify-0.7 x11-libs/libX11 >=x11-libs/libwnck-3.0:3 x11-libs/pango sys-power/cpupower >=sys-auth/polkit-0.97:0 >=sys-power/upower-0.99.8 mate-base/caja mate-base/mate-desktop >=mate-base/mate-settings-daemon-1.28.0 virtual/libintl >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo.so.2 libcpupower.so.0 libdbus-glib-1.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgtop-2.0.so.11 libgucharmap_2_90.so.7 libm.so.6 libmate-desktop-2.so.17 libmate-panel-applet-4.so.1 libmateweather.so.1 libnotify.so.4 libpango-1.0.so.0 libpangocairo-1.0.so.0 libpolkit-gobject-1.so.0 libupower-glib.so.3 libwnck-3.so.0 libxml2.so.2
+SHA1: 0d060f10f136fe44841e8468d7526c35ce9dda6e
+SIZE: 8960000
+USE: X cpupower elibc_glibc kernel_linux policykit ppc64 upower
+MTIME: 1719414401
+REPO: gentoo
+
+BUILD_ID: 1
+BUILD_TIME: 1719414515
+CPV: mate-base/mate-applets-meta-1.28.0
+DEFINED_PHASES: -
+EAPI: 8
+IUSE: appindicator networkmanager sensors
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: metapackage
+MD5: f63b7d967c36418232a49659cbd867d1
+PATH: mate-base/mate-applets-meta/mate-applets-meta-1.28.0-1.gpkg.tar
+RDEPEND: =mate-base/mate-applets-1.28*
+SHA1: 5e47f236dfddc2f429b6d706dfa3eb345aad4387
+SIZE: 20480
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1719414523
+REPO: gentoo
+
+BUILD_ID: 1
 BUILD_TIME: 1719360929
 CPV: mate-base/mate-common-1.28.0
 DEFINED_PHASES: install
@@ -7890,6 +8035,26 @@ SHA1: 28cb426e90ca130127e2d5d1b7653bcbe3b0b403
 SIZE: 40960
 USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719360949
+REPO: gentoo
+
+BDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/glib-2.50:2 dev-libs/libxml2:2 dev-libs/libayatana-appindicator >=gnome-base/dconf-0.13.4 >=gnome-base/librsvg-2.0:2 >=mate-base/libmatekbd-1.28.0 >=mate-base/mate-desktop-1.28.0 >=mate-base/caja-1.28.0 >=mate-base/mate-menus-1.28.0 >=media-libs/fontconfig-1:1.0 media-libs/freetype:2 media-libs/libcanberra:0[gtk3] sys-auth/polkit[introspection] x11-apps/xmodmap x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libX11 x11-libs/libXScrnSaver x11-libs/libXcursor x11-libs/libXext >=x11-libs/libXi-1.5 x11-libs/libXrandr x11-libs/libXrender >=x11-libs/libxklavier-4 x11-libs/pango >=x11-wm/marco-1.17.0:0/2= app-text/yelp-tools dev-libs/libxml2 dev-util/desktop-file-utils dev-util/glib-utils >=sys-devel/gettext-0.19.8 x11-base/xorg-proto virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719412227
+CPV: mate-base/mate-control-center-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: accountsservice debug nls systemd
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: FDL-1.1+ GPL-2+ LGPL-2+ LGPL-2.1+ HPND
+MD5: 47cfe459cb8437a768fbeef660805471
+PATH: mate-base/mate-control-center/mate-control-center-1.28.0-1.gpkg.tar
+RDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/glib-2.50:2 dev-libs/libxml2:2 dev-libs/libayatana-appindicator >=gnome-base/dconf-0.13.4 >=gnome-base/librsvg-2.0:2 >=mate-base/libmatekbd-1.28.0 >=mate-base/mate-desktop-1.28.0 >=mate-base/caja-1.28.0 >=mate-base/mate-menus-1.28.0 >=media-libs/fontconfig-1:1.0 media-libs/freetype:2 media-libs/libcanberra:0[gtk3] sys-auth/polkit[introspection] x11-apps/xmodmap x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libX11 x11-libs/libXScrnSaver x11-libs/libXcursor x11-libs/libXext >=x11-libs/libXi-1.5 x11-libs/libXrandr x11-libs/libXrender >=x11-libs/libxklavier-4 x11-libs/pango >=x11-wm/marco-1.17.0:0/2= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libXcursor.so.1 libXi.so.6 libXss.so.1 libatk-1.0.so.0 libayatana-appindicator3.so.1 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libcanberra-gtk3.so.0 libcanberra.so.0 libdconf.so.1 libfontconfig.so.1 libfreetype.so.6 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgtop-2.0.so.11 libm.so.6 libmarco-private.so.2 libmate-desktop-2.so.17 libmate-menu.so.2 libmatekbd.so.6 libmatekbdui.so.6 libpango-1.0.so.0 libpangocairo-1.0.so.0 libpolkit-gobject-1.so.0 libudisks2.so.0 libxklavier.so.16 libxml2.so.2
+SHA1: 606ddb79bba28c4f22f81e638bce39ac07e9ecf9
+SIZE: 3297280
+USE: elibc_glibc kernel_linux nls ppc64
+MTIME: 1719412251
 REPO: gentoo
 
 BDEPEND: app-text/docbook-xml-dtd:4.1.2 app-text/iso-codes dev-util/gtk-doc dev-build/gtk-doc-am >=sys-devel/gettext-0.19.8 >=x11-libs/gdk-pixbuf-2.36.5 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
@@ -7958,6 +8123,70 @@ USE: X elibc_glibc introspection kernel_linux ppc64 wayland
 MTIME: 1719398118
 REPO: gentoo
 
+BDEPEND: dev-build/autoconf-archive dev-util/glib-utils >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719406685
+CPV: mate-base/mate-session-manager-1.28.0-r1
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+DEPEND: >=dev-libs/dbus-glib-0.76 >=dev-libs/glib-2.50:2 dev-libs/libxslt sys-apps/dbus x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXext x11-libs/libXrender x11-libs/libXtst x11-libs/pango sys-auth/elogind >=dev-lang/perl-5 x11-libs/xtrans
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: debug elogind gles2 gnome-keyring nls systemd
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: GPL-2+ GPL-3+ HPND LGPL-2+ LGPL-2.1+
+MD5: ea26c6879b702282d62b29037bb8072f
+PATH: mate-base/mate-session-manager/mate-session-manager-1.28.0-r1-1.gpkg.tar
+RDEPEND: >=dev-libs/dbus-glib-0.76 >=dev-libs/glib-2.50:2 dev-libs/libxslt sys-apps/dbus x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXau x11-libs/libXext x11-libs/libXrender x11-libs/libXtst x11-libs/pango sys-auth/elogind mate-base/mate-desktop virtual/libintl x11-apps/xdpyinfo x11-misc/xdg-user-dirs x11-misc/xdg-user-dirs-gtk >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libGL.so.1 libICE.so.6 libSM.so.6 libX11.so.6 libXau.so.6 libXcomposite.so.1 libXext.so.6 libXrender.so.1 libXtst.so.6 libc.so.6 libcairo.so.2 libdbus-1.so.3 libdbus-glib-1.so.2 libelogind.so.0 libepoxy.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0
+SHA1: 3318c22c4c971cae974cf1cfc03e3744e4ce53a5
+SIZE: 501760
+USE: elibc_glibc elogind kernel_linux nls ppc64
+MTIME: 1719406730
+REPO: gentoo
+
+BDEPEND: >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719410182
+CPV: mate-base/mate-settings-daemon-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+DEPEND: >=dev-util/gdbus-codegen-2.76.4 >=dev-libs/glib-2.50:2 >=gnome-base/dconf-0.13.4 >=mate-base/libmatekbd-1.17.0 >=mate-base/mate-desktop-1.25.0 media-libs/fontconfig:1.0 x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libX11 x11-libs/libXi x11-libs/libXext >=x11-libs/libxklavier-5.2 >=x11-libs/libnotify-0.7:0 >=dev-libs/dbus-glib-0.71 >=sys-apps/dbus-1.10.0 >=sys-auth/polkit-0.97 >=media-libs/libmatemixer-1.10 media-libs/libcanberra[gtk3] virtual/libintl x11-base/xorg-proto
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: X accessibility debug libnotify policykit pulseaudio rfkill smartcard +sound
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: GPL-2+ GPL-3+ HPND LGPL-2+ LGPL-2.1+
+MD5: 0d0bbe959a874a7e3b05b5b8588051a9
+PATH: mate-base/mate-settings-daemon/mate-settings-daemon-1.28.0-1.gpkg.tar
+PROVIDES: ppc_64: liba11y-keyboard.so liba11y-settings.so libbackground.so libclipboard.so libhousekeeping.so libkeybindings.so libkeyboard.so libmedia-keys.so libmouse.so libmpris.so libsound.so libtyping-break.so libxrandr.so libxrdb.so libxsettings.so
+RDEPEND: >=dev-util/gdbus-codegen-2.76.4 >=dev-libs/glib-2.50:2 >=gnome-base/dconf-0.13.4 >=mate-base/libmatekbd-1.17.0 >=mate-base/mate-desktop-1.25.0 media-libs/fontconfig:1.0 x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libX11 x11-libs/libXi x11-libs/libXext >=x11-libs/libxklavier-5.2 >=x11-libs/libnotify-0.7:0 >=dev-libs/dbus-glib-0.71 >=sys-apps/dbus-1.10.0 >=sys-auth/polkit-0.97 >=media-libs/libmatemixer-1.10 media-libs/libcanberra[gtk3] virtual/libintl >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libXi.so.6 libatspi.so.0 libc.so.6 libcairo.so.2 libcanberra-gtk3.so.0 libdconf.so.1 libfontconfig.so.1 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libmate-desktop-2.so.17 libmatekbd.so.6 libmatekbdui.so.6 libmatemixer.so.0 libnotify.so.4 libpolkit-gobject-1.so.0 libxklavier.so.16
+SHA1: 8bedf81c208467208eaf330c356948bfbfd2e8f6
+SIZE: 839680
+USE: X elibc_glibc kernel_linux libnotify policykit ppc64 sound
+MTIME: 1719410196
+REPO: gentoo
+
+BDEPEND: >=dev-libs/glib-2.50:2 >=mate-base/caja-1.28.0 x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 >=mate-base/mate-desktop-1.28.0 sys-apps/attr dev-libs/libxml2 dev-util/gtk-doc dev-build/gtk-doc-am >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719410986
+CPV: mate-extra/caja-extensions-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: image-converter nls +open-terminal share +wallpaper xattr media cdr gajim +mail pidgin upnp
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: GPL-2+
+MD5: bd72f1049db3bdcedf832bdfe107d3ef
+PATH: mate-extra/caja-extensions/caja-extensions-1.28.0-1.gpkg.tar
+PROVIDES: ppc_64: libcaja-open-terminal.so libcaja-sendto.so libcaja-wallpaper.so libcaja-xattr-tags.so libnstburn.so libnstemailclient.so libnstremovable_devices.so
+RDEPEND: >=dev-libs/glib-2.50:2 >=mate-base/caja-1.28.0 x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 >=mate-base/mate-desktop-1.28.0 sys-apps/attr mate-base/mate-desktop >=app-cdr/brasero-2.32.1:0/3.1= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libcaja-extension.so.1 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libmate-desktop-2.so.17
+SHA1: ad7a153487f4907043925bc843833bf0748b3211
+SIZE: 327680
+USE: cdr elibc_glibc kernel_linux mail nls open-terminal ppc64 wallpaper xattr
+MTIME: 1719411023
+REPO: gentoo
+
 BDEPEND: >=app-accessibility/at-spi2-core-2.46.0 >=dev-libs/glib-2.50:2 dev-libs/libxml2:2 dev-libs/mpc:0/3= >=dev-libs/mpfr-4.0.2:0/6= >=x11-libs/gtk+-3.22:3 x11-libs/pango app-text/yelp-tools dev-libs/libxml2 >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
 BUILD_ID: 1
 BUILD_TIME: 1719378558
@@ -7975,6 +8204,26 @@ SHA1: 2e7a9cd36b902aad4ab68df5363eb5082997cb6d
 SIZE: 993280
 USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719378625
+REPO: gentoo
+
+BDEPEND: >=dev-libs/glib-2.50:2 dev-libs/libxml2:2 >=mate-base/mate-panel-1.28.0 >=mate-base/mate-desktop-1.28.0 >=media-libs/libcanberra-0.13[gtk3] >=media-libs/libmatemixer-1.28.0 x11-libs/cairo >=x11-libs/gtk+-3.22:3 x11-libs/pango virtual/libintl >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719406364
+CPV: mate-extra/mate-media-1.28.1
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+DEPEND: >=dev-libs/glib-2.50:2 dev-libs/libxml2:2 >=mate-base/mate-panel-1.28.0 >=mate-base/mate-desktop-1.28.0 >=media-libs/libcanberra-0.13[gtk3] >=media-libs/libmatemixer-1.28.0 x11-libs/cairo >=x11-libs/gtk+-3.22:3 x11-libs/pango >=sys-devel/gettext-0.19.8 virtual/pkgconfig
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: FDL-1.1+ GPL-2+ HPND LGPL-2+
+MD5: 36a27a48dcc05708a22009049750d8fd
+PATH: mate-extra/mate-media/mate-media-1.28.1-1.gpkg.tar
+RDEPEND: >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libatk-1.0.so.0 libc.so.6 libcairo.so.2 libcanberra-gtk3.so.0 libcanberra.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libmate-desktop-2.so.17 libmate-panel-applet-4.so.1 libmatemixer.so.0 libpango-1.0.so.0 libxml2.so.2
+SHA1: 0858691b38df884a7d4515bf3e7ea4f7e3093a67
+SIZE: 337920
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1719406395
 REPO: gentoo
 
 BDEPEND: x11-libs/gdk-pixbuf:2 virtual/libintl:0 >=x11-libs/gtk+-3.22.0:3 dev-util/gtk-doc dev-build/gtk-doc-am >=dev-util/intltool-0.35 sys-devel/gettext >=dev-build/libtool-2.2.6 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
@@ -7997,6 +8246,48 @@ USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719403414
 REPO: gentoo
 
+BDEPEND: >=dev-libs/dbus-glib-0.70 >=dev-libs/glib-2.50:2 >=media-libs/libcanberra-0.10:0[gtk3] >=sys-apps/dbus-1 >=sys-power/upower-0.99.8:0/3= >=x11-apps/xrandr-1.3 >=x11-libs/cairo-1 >=x11-libs/gdk-pixbuf-2.11:2 >=x11-libs/gtk+-3.22:3 x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr >=x11-libs/libnotify-0.7:0 x11-libs/pango >=mate-base/mate-panel-1.28.0 app-text/docbook-xml-dtd:4.3 app-text/yelp-tools dev-libs/libxml2 dev-util/glib-utils >=sys-devel/gettext-0.19.8 virtual/pkgconfig x11-base/xorg-proto >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719410311
+CPV: mate-extra/mate-power-manager-1.28.1
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare test
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: +applet +elogind keyring policykit systemd test
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: FDL-1.1+ GPL-2+ LGPL-2+
+MD5: 5e0d3e1cf4403eb603c3a114ba22c7cf
+PATH: mate-extra/mate-power-manager/mate-power-manager-1.28.1-1.gpkg.tar
+RDEPEND: >=dev-libs/dbus-glib-0.70 >=dev-libs/glib-2.50:2 >=media-libs/libcanberra-0.10:0[gtk3] >=sys-apps/dbus-1 >=sys-power/upower-0.99.8:0/3= >=x11-apps/xrandr-1.3 >=x11-libs/cairo-1 >=x11-libs/gdk-pixbuf-2.11:2 >=x11-libs/gtk+-3.22:3 x11-libs/libX11 x11-libs/libXext x11-libs/libXrandr >=x11-libs/libnotify-0.7:0 x11-libs/pango >=mate-base/mate-panel-1.28.0 virtual/libintl >=mate-extra/mate-polkit-1.28.0 sys-auth/elogind >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libXext.so.6 libXrandr.so.2 libc.so.6 libcairo.so.2 libcanberra-gtk3.so.0 libcanberra.so.0 libdbus-1.so.3 libdbus-glib-1.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libmate-desktop-2.so.17 libmate-panel-applet-4.so.1 libnotify.so.4 libpango-1.0.so.0 libpangocairo-1.0.so.0 libupower-glib.so.3
+RESTRICT: test
+SHA1: ed6d4997ba1437561e47e2cd932376870fd8ce67
+SIZE: 6727680
+USE: applet elibc_glibc elogind kernel_linux policykit ppc64
+MTIME: 1719410384
+REPO: gentoo
+
+BDEPEND: >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719409608
+CPV: mate-extra/mate-screensaver-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+DEPEND: >=dev-libs/dbus-glib-0.71:0 >=dev-libs/glib-2.58:2 gnome-base/dconf >=mate-base/libmatekbd-1.17.0 >=mate-base/mate-desktop-1.17.0 >=mate-base/mate-menus-1.21.0 >=sys-apps/dbus-0.30 >=x11-libs/gdk-pixbuf-2.14:2 >=x11-libs/libX11-1 x11-libs/cairo >=x11-libs/gtk+-3.22:3 x11-libs/libXext x11-libs/libXrandr x11-libs/libXScrnSaver x11-libs/libXxf86vm x11-libs/libxklavier x11-libs/pango >=x11-libs/libnotify-0.7:0 virtual/opengl gnome-base/gnome-keyring sys-libs/pam sys-auth/elogind dev-libs/libxml2 >=sys-devel/gettext-0.19.8:* x11-base/xorg-proto virtual/pkgconfig:*
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: X debug elogind libnotify opengl pam systemd
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: GPL-2+ HPND LGPL-2+
+MD5: 949e413d374d145aeeb5937ae075b36b
+PATH: mate-extra/mate-screensaver/mate-screensaver-1.28.0-1.gpkg.tar
+RDEPEND: >=dev-libs/dbus-glib-0.71:0 >=dev-libs/glib-2.58:2 gnome-base/dconf >=mate-base/libmatekbd-1.17.0 >=mate-base/mate-desktop-1.17.0 >=mate-base/mate-menus-1.21.0 >=sys-apps/dbus-0.30 >=x11-libs/gdk-pixbuf-2.14:2 >=x11-libs/libX11-1 x11-libs/cairo >=x11-libs/gtk+-3.22:3 x11-libs/libXext x11-libs/libXrandr x11-libs/libXScrnSaver x11-libs/libXxf86vm x11-libs/libxklavier x11-libs/pango >=x11-libs/libnotify-0.7:0 virtual/opengl gnome-base/gnome-keyring sys-libs/pam sys-auth/elogind >=mate-base/mate-session-manager-1.6 virtual/libintl mate-base/mate-panel >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libGL.so.1 libX11.so.6 libXext.so.6 libXss.so.1 libXxf86vm.so.1 libc.so.6 libcairo.so.2 libdbus-1.so.3 libdbus-glib-1.so.2 libelogind.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libmate-desktop-2.so.17 libmate-menu.so.2 libmatekbdui.so.6 libnotify.so.4 libpam.so.0 libpango-1.0.so.0 libxklavier.so.16
+SHA1: 76975b5c63e8e9ac208271cad822515b9b823ff7
+SIZE: 4915200
+USE: X elibc_glibc elogind kernel_linux libnotify opengl pam ppc64
+MTIME: 1719409656
+REPO: gentoo
+
 BDEPEND: >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
 BUILD_ID: 1
 BUILD_TIME: 1719389675
@@ -8016,6 +8307,28 @@ SHA1: 605553318d89876c8b6f729f41385b4c1e575b20
 SIZE: 2365440
 USE: elibc_glibc elogind kernel_linux ppc64
 MTIME: 1719389880
+REPO: gentoo
+
+BDEPEND: >=app-accessibility/at-spi2-core-2.46.0 >=dev-libs/glib-2.50:2 >=gnome-base/libgtop-2.12:2/11= >=media-libs/libcanberra-0.4[gtk3] sys-libs/zlib x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/pango >=sys-fs/udisks-1.90.0:2 app-text/rarian app-text/yelp-tools dev-libs/libxml2 dev-util/glib-utils dev-util/gtk-doc dev-build/gtk-doc-am >=sys-devel/gettext-0.19.8 virtual/pkgconfig x11-base/xorg-proto >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719407586
+CPV: mate-extra/mate-utils-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: X applet debug nls test udisks
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: FDL-1.1+ GPL-2+ GPL-3+ LGPL-2+
+MD5: 3606bf98091f0283818506178c19ff17
+PATH: mate-extra/mate-utils/mate-utils-1.28.0-1.gpkg.tar
+PROVIDES: ppc_64: libmatedict.so.6
+RDEPEND: >=app-accessibility/at-spi2-core-2.46.0 >=dev-libs/glib-2.50:2 >=gnome-base/libgtop-2.12:2/11= >=media-libs/libcanberra-0.4[gtk3] sys-libs/zlib x11-libs/cairo x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/pango >=sys-fs/udisks-1.90.0:2 mate-base/mate-desktop virtual/libintl >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libXext.so.6 libatk-1.0.so.0 libc.so.6 libcairo.so.2 libcanberra-gtk3.so.0 libcanberra.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgtop-2.0.so.11 libm.so.6 libmate-desktop-2.so.17 libpango-1.0.so.0 libpangocairo-1.0.so.0 libudisks2.so.0 libz.so.1
+RESTRICT: test
+SHA1: 5c302af4edcbd773cf99ebe0dbc2595a322bcecf
+SIZE: 7936000
+USE: X elibc_glibc kernel_linux nls ppc64 udisks
+MTIME: 1719407735
 REPO: gentoo
 
 BDEPEND: x11-apps/mkfontscale >=app-portage/elt-patches-20240116 virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
@@ -9752,6 +10065,27 @@ SHA1: 262cbf786993d3e918559f12befa538ea570e843
 SIZE: 6225920
 USE: X acl dbus elibc_glibc kernel_linux pam ppc64 usb
 MTIME: 1718206953
+REPO: gentoo
+
+BDEPEND: dev-python/cython[python_targets_python3_12(-)] virtual/pkgconfig sys-devel/gettext >=app-portage/elt-patches-20240116 sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 dev-lang/python:3.12 virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1719409723
+CPV: net-wireless/blueman-2.4.2
+DEFINED_PHASES: compile configure install postinst postrm prepare pretend setup test
+DEPEND: dev-python/pygobject:3[python_targets_python3_12(-)] >=net-wireless/bluez-5:0/3= dev-lang/python:3.12
+EAPI: 8
+IUSE: network nls policykit pulseaudio python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 debug
+KEYWORDS: amd64 arm arm64 ~loong ppc ppc64 ~riscv x86
+LICENSE: GPL-3+ GPL-2
+MD5: 9cefb1f4bc177814b62e72020d454f08
+PATH: net-wireless/blueman/blueman-2.4.2-1.gpkg.tar
+PROVIDES: ppc_64: _blueman.so
+RDEPEND: dev-python/pygobject:3[python_targets_python3_12(-)] >=net-wireless/bluez-5:0/3= dev-python/pycairo[python_targets_python3_12(-)] sys-apps/dbus x11-libs/gtk+:3[introspection,X] x11-libs/libnotify[introspection] || ( x11-themes/adwaita-icon-theme x11-themes/faenza-icon-theme x11-themes/mate-icon-theme ) sys-auth/polkit dev-lang/python:3.12 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libbluetooth.so.3 libc.so.6 libglib-2.0.so.0 libgthread-2.0.so.0
+SHA1: 37418c44f4d9e3fc3cc02979867afb613d841a56
+SIZE: 1638400
+USE: elibc_glibc kernel_linux nls policykit ppc64 python_single_target_python3_12
+MTIME: 1719409776
 REPO: gentoo
 
 BDEPEND: dev-python/docutils virtual/pkgconfig >=app-portage/elt-patches-20240116 sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 virtual/pkgconfig virtual/pkgconfig
@@ -12192,6 +12526,22 @@ MTIME: 1719387434
 REPO: gentoo
 
 BUILD_ID: 1
+BUILD_TIME: 1719408706
+CPV: virtual/notification-daemon-0
+DEFINED_PHASES: -
+EAPI: 7
+IUSE: gnome kde
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
+MD5: e319b49d2f23331be7986665313de3b0
+PATH: virtual/notification-daemon/notification-daemon-0-1.gpkg.tar
+RDEPEND: || ( x11-misc/notification-daemon gnome-extra/cinnamon gui-apps/mako xfce-extra/xfce4-notifyd x11-misc/notify-osd x11-misc/dunst >=x11-wm/awesome-3.4.4[dbus] x11-wm/enlightenment x11-misc/mate-notification-daemon lxqt-base/lxqt-notificationd net-misc/eventd[notification] )
+SHA1: 4f8ca44417dc81a53d6f289d298c070f8d8ab4c0
+SIZE: 20480
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1719408715
+REPO: gentoo
+
+BUILD_ID: 1
 BUILD_TIME: 1719362330
 CPV: virtual/opengl-7.0-r2
 DEFINED_PHASES: -
@@ -13582,6 +13932,31 @@ USE: elibc_glibc introspection jpeg kernel_linux ppc64 tiff
 MTIME: 1718203110
 REPO: gentoo
 
+BDEPEND: app-text/docbook-xml-dtd:4.1.2 app-text/docbook-xml-dtd:4.3 app-text/docbook-xsl-stylesheets dev-libs/gobject-introspection-common dev-libs/libxslt dev-util/glib-utils >=dev-build/gtk-doc-am-1.20 >=sys-devel/gettext-0.18.3 virtual/pkgconfig >=app-portage/elt-patches-20240116 sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 app-arch/xz-utils
+BUILD_ID: 1
+BUILD_TIME: 1719405795
+CPV: x11-libs/gtk+-2.24.33-r3
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare test
+DEPEND: >=app-accessibility/at-spi2-core-2.46.0[introspection] >=dev-libs/glib-2.34.3:2 >=media-libs/fontconfig-2.10.92 virtual/libintl >=x11-libs/cairo-1.12.14-r4:0/0=[svg(+)] >=x11-libs/gdk-pixbuf-2.30.7:2[introspection] >=x11-libs/pango-1.36.3[introspection] x11-misc/shared-mime-info >=net-print/cups-1.7.1-r2:0/0= >=dev-libs/gobject-introspection-0.9.3:0/0= >=x11-libs/cairo-1.12.14-r4:0/0=[svg(+),X] >=x11-libs/libX11-1.6.2 >=x11-libs/libXcomposite-0.4.4-r1 >=x11-libs/libXcursor-1.1.14 >=x11-libs/libXdamage-1.1.4-r1 >=x11-libs/libXext-1.3.2 >=x11-libs/libXfixes-5.0.1 >=x11-libs/libXi-1.7.2 >=x11-libs/libXrandr-1.5 >=x11-libs/libXrender-0.9.8 x11-base/xorg-proto
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: aqua cups examples +introspection test vim-syntax xinerama abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 test
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~ppc-macos ~x64-macos ~x64-solaris
+LICENSE: LGPL-2+
+MD5: 8cd8859eea3d8c3c1c060b9a36618142
+PATH: x11-libs/gtk+/gtk+-2.24.33-r3-1.gpkg.tar
+PDEPEND: gnome-base/librsvg x11-themes/gtk-engines-adwaita
+PROVIDES: ppc_64: im-am-et.so im-cedilla.so im-cyrillic-translit.so im-inuktitut.so im-ipa.so im-multipress.so im-thai.so im-ti-er.so im-ti-et.so im-viqr.so im-xim.so libferret.so libgail.so libgailutil.so.18 libgdk-x11-2.0.so.0 libgtk-x11-2.0.so.0 libpixmap.so libprintbackend-cups.so libprintbackend-file.so libprintbackend-lpr.so
+RDEPEND: >=app-accessibility/at-spi2-core-2.46.0[introspection] >=dev-libs/glib-2.34.3:2 >=media-libs/fontconfig-2.10.92 virtual/libintl >=x11-libs/cairo-1.12.14-r4:0/0=[svg(+)] >=x11-libs/gdk-pixbuf-2.30.7:2[introspection] >=x11-libs/pango-1.36.3[introspection] x11-misc/shared-mime-info >=net-print/cups-1.7.1-r2:0/0= >=dev-libs/gobject-introspection-0.9.3:0/0= >=x11-libs/cairo-1.12.14-r4:0/0=[svg(+),X] >=x11-libs/libX11-1.6.2 >=x11-libs/libXcomposite-0.4.4-r1 >=x11-libs/libXcursor-1.1.14 >=x11-libs/libXdamage-1.1.4-r1 >=x11-libs/libXext-1.3.2 >=x11-libs/libXfixes-5.0.1 >=x11-libs/libXi-1.7.2 >=x11-libs/libXrandr-1.5 >=x11-libs/libXrender-0.9.8 >=dev-util/gtk-update-icon-cache-2 >=x11-themes/adwaita-icon-theme-3.14 x11-themes/gnome-themes-standard !<dev-util/gtk-builder-convert-2.24.33 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libXcomposite.so.1 libXcursor.so.1 libXdamage.so.1 libXext.so.6 libXfixes.so.3 libXi.so.6 libXrandr.so.2 libXrender.so.1 libatk-1.0.so.0 libc.so.6 libcairo.so.2 libcups.so.2 libfontconfig.so.1 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libm.so.6 libpango-1.0.so.0 libpangocairo-1.0.so.0 libpangoft2-1.0.so.0
+RESTRICT: test test
+SHA1: c9b59e18be92ebcc8144851696104a51e5674c64
+SIZE: 10721280
+SLOT: 2
+USE: cups elibc_glibc introspection kernel_linux ppc64
+MTIME: 1719405814
+REPO: gentoo
+
 BDEPEND: app-text/docbook-xml-dtd:4.1.2 app-text/docbook-xsl-stylesheets dev-libs/gobject-introspection-common dev-libs/libxslt >=dev-util/gdbus-codegen-2.48 dev-util/glib-utils >=dev-build/gtk-doc-am-1.20 >=sys-devel/gettext-0.19.7 virtual/pkgconfig x11-libs/gdk-pixbuf:2 >=app-portage/elt-patches-20240116 app-arch/xz-utils >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 BUILD_ID: 1
 BUILD_TIME: 1718207865
@@ -14203,6 +14578,30 @@ USE: elibc_glibc kernel_linux ppc64
 MTIME: 1718194062
 REPO: gentoo
 
+BDEPEND: >=dev-libs/gobject-introspection-common-1.32 dev-util/glib-utils virtual/pkgconfig app-text/docbook-xsl-ns-stylesheets dev-libs/libxslt app-arch/xz-utils >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
+BUILD_ID: 1
+BUILD_TIME: 1719406117
+CPV: x11-libs/libnotify-0.8.3
+DEFINED_PHASES: compile configure install postinst postrm prepare test
+DEPEND: >=dev-libs/glib-2.62:2 x11-libs/gdk-pixbuf:2[introspection] >=dev-libs/gobject-introspection-1.54:0/0=
+EAPI: 8
+IDEPEND: app-eselect/eselect-notify-send
+IUSE: gtk-doc +introspection test abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
+LICENSE: LGPL-2.1+
+MD5: 44c454415756bd07c0558474736363e0
+PATH: x11-libs/libnotify/libnotify-0.8.3-1.gpkg.tar
+PDEPEND: virtual/notification-daemon
+PROVIDES: ppc_64: libnotify.so.4
+RDEPEND: >=dev-libs/glib-2.62:2 x11-libs/gdk-pixbuf:2[introspection] >=dev-libs/gobject-introspection-1.54:0/0= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0
+RESTRICT: test
+SHA1: 0c71a1366ba9b79646da77c97f17a31cc09d5052
+SIZE: 92160
+USE: elibc_glibc introspection kernel_linux ppc64
+MTIME: 1719406167
+REPO: gentoo
+
 BDEPEND: >=app-portage/elt-patches-20240116 virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 BUILD_ID: 1
 BUILD_TIME: 1719367124
@@ -14621,6 +15020,28 @@ REPO: gentoo
 
 BDEPEND: >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
 BUILD_ID: 1
+BUILD_TIME: 1719408293
+CPV: x11-misc/mate-notification-daemon-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+DEPEND: dev-libs/atk >=dev-libs/glib-2.50:2 >=dev-libs/libxml2-2.9.0 >=sys-apps/dbus-1 x11-libs/cairo >=x11-libs/gdk-pixbuf-2.22:2 >=x11-libs/libnotify-0.7 >=x11-libs/gtk+-3.22:3 >=media-libs/libcanberra-0.4:0[gtk3] x11-libs/libX11 >=x11-libs/libwnck-3:3 gui-libs/gtk-layer-shell app-arch/xz-utils dev-util/gdbus-codegen >=sys-devel/gettext-0.19.8 virtual/pkgconfig mate-base/mate-panel
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: nls X wayland
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: GPL-2+ GPL-3+
+MD5: ce3fdca98064af6b7194db3c03dd4147
+PATH: x11-misc/mate-notification-daemon/mate-notification-daemon-1.28.0-1.gpkg.tar
+PROVIDES: ppc_64: libcoco.so libnodoka.so libslider.so libstandard.so
+RDEPEND: dev-libs/atk >=dev-libs/glib-2.50:2 >=dev-libs/libxml2-2.9.0 >=sys-apps/dbus-1 x11-libs/cairo >=x11-libs/gdk-pixbuf-2.22:2 >=x11-libs/libnotify-0.7 >=x11-libs/gtk+-3.22:3 >=media-libs/libcanberra-0.4:0[gtk3] x11-libs/libX11 >=x11-libs/libwnck-3:3 gui-libs/gtk-layer-shell !x11-misc/notify-osd !x11-misc/qtnotifydaemon !x11-misc/notification-daemon >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo.so.2 libcanberra-gtk3.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgtk-layer-shell.so.0 libmate-desktop-2.so.17 libmate-panel-applet-4.so.1 libnotify.so.4 libwnck-3.so.0 libxml2.so.2
+SHA1: bb233894746e3f737d838c76c4c1c2f62dc520e6
+SIZE: 204800
+USE: X elibc_glibc kernel_linux nls ppc64 wayland
+MTIME: 1719408308
+REPO: gentoo
+
+BDEPEND: >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
 BUILD_TIME: 1719381868
 CPV: x11-misc/mozo-1.28.0
 DEFINED_PHASES: compile configure install postinst postrm preinst prepare test
@@ -14810,6 +15231,27 @@ USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719404363
 REPO: gentoo
 
+BDEPEND: >=dev-util/intltool-0.40 sys-devel/gettext virtual/pkgconfig app-arch/xz-utils
+BUILD_ID: 1
+BUILD_TIME: 1719406214
+CPV: x11-themes/gtk-engines-adwaita-3.28-r1
+DEFINED_PHASES: compile configure install test
+DEPEND: >=x11-libs/gtk+-2.24.15:2
+EAPI: 8
+IUSE: abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~x64-solaris
+LICENSE: LGPL-2.1+
+MD5: d6f88faeea741d594ffa499dd968c93f
+PATH: x11-themes/gtk-engines-adwaita/gtk-engines-adwaita-3.28-r1-1.gpkg.tar
+PROVIDES: ppc_64: libadwaita.so
+RDEPEND: >=x11-libs/gtk+-2.24.15:2 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libatk-1.0.so.0 libc.so.6 libcairo.so.2 libfontconfig.so.1 libfreetype.so.6 libgdk-x11-2.0.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-x11-2.0.so.0 libharfbuzz.so.0 libpango-1.0.so.0 libpangocairo-1.0.so.0 libpangoft2-1.0.so.0
+SHA1: 36d459483af4ce8abdf5c069101bc5664f173d50
+SIZE: 368640
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1719406248
+REPO: gentoo
+
 BDEPEND: app-arch/xz-utils
 BUILD_ID: 1
 BUILD_TIME: 1718190723
@@ -14845,6 +15287,46 @@ USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719369031
 REPO: gentoo
 
+BDEPEND: >=x11-themes/hicolor-icon-theme-0.10 >=dev-util/intltool-0.40 >=x11-misc/icon-naming-utils-0.8.7:0 sys-devel/gettext:* virtual/pkgconfig:* >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
+BUILD_ID: 1
+BUILD_TIME: 1719407874
+CPV: x11-themes/mate-icon-theme-1.28.0
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: GPL-2
+MD5: 47a6a0ee9ba6a2111386595ac79b9be0
+PATH: x11-themes/mate-icon-theme/mate-icon-theme-1.28.0-1.gpkg.tar
+RDEPEND: >=x11-themes/hicolor-icon-theme-0.10
+RESTRICT: binchecks strip
+SHA1: 641f0f96a027225bc5855e9cb4fc3f7415a1db3c
+SIZE: 14796800
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1719407926
+REPO: gentoo
+
+BDEPEND: >=app-portage/elt-patches-20240116 sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
+BUILD_ID: 1
+BUILD_TIME: 1719408553
+CPV: x11-themes/mate-themes-3.22.24-r1
+DEFINED_PHASES: install postinst postrm preinst prepare
+DEPEND: >=x11-libs/gdk-pixbuf-2:2 >=x11-libs/gtk+-2:2 >=sys-devel/gettext-0.19.8:* >=dev-build/autoconf-2.53 >=x11-misc/icon-naming-utils-0.8.7:0 virtual/pkgconfig
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+KEYWORDS: ~amd64 ~arm ~arm64 ~loong ~riscv ~x86
+LICENSE: CC-BY-SA-3.0 GPL-3+ LGPL-2.1+ LGPL-3
+MD5: 912e7ffab90e07bba8da17248330b9e0
+PATH: x11-themes/mate-themes/mate-themes-3.22.24-r1-1.gpkg.tar
+RDEPEND: >=x11-libs/gdk-pixbuf-2:2 >=x11-libs/gtk+-2:2
+RESTRICT: binchecks strip
+SHA1: a326f883a683d892c7dda36c0be9933d1e07094c
+SIZE: 9492480
+SLOT: 0/3.22
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1719408616
+REPO: gentoo
+
 BDEPEND: >=dev-util/intltool-0.40 sys-devel/gettext
 BUILD_ID: 1
 BUILD_TIME: 1719403236
@@ -14859,5 +15341,28 @@ SHA1: f6623cab668dd2cec93dc5d5eda7cdb4d792a2f0
 SIZE: 399360
 USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719403251
+REPO: gentoo
+
+BDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/glib-2.58:2 >=gnome-base/libgtop-2:2/11= media-libs/libcanberra[gtk3] x11-libs/cairo >=x11-libs/pango-1.2[X] x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXcomposite-0.3 x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXpresent x11-libs/libXrandr x11-libs/libXrender x11-libs/libXres >=x11-libs/startup-notification-0.7 app-text/yelp-tools >=sys-devel/gettext-0.19.8 virtual/pkgconfig x11-base/xorg-proto >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28 >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
+BUILD_ID: 1
+BUILD_TIME: 1719406309
+CPV: x11-wm/marco-1.28.1
+DEFINED_PHASES: compile configure install postinst postrm preinst prepare test
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: startup-notification test xinerama
+KEYWORDS: amd64 ~arm ~arm64 ~loong ~riscv x86
+LICENSE: FDL-1.2+ GPL-2+ LGPL-2+ MIT
+MD5: bc741635aecd2d4d61e9ca080f8ac625
+PATH: x11-wm/marco/marco-1.28.1-1.gpkg.tar
+PROVIDES: ppc_64: libmarco-private.so.2
+RDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/glib-2.58:2 >=gnome-base/libgtop-2:2/11= media-libs/libcanberra[gtk3] x11-libs/cairo >=x11-libs/pango-1.2[X] x11-libs/gdk-pixbuf:2 >=x11-libs/gtk+-3.22:3 x11-libs/libICE x11-libs/libSM x11-libs/libX11 >=x11-libs/libXcomposite-0.3 x11-libs/libXcursor x11-libs/libXdamage x11-libs/libXext x11-libs/libXfixes x11-libs/libXi x11-libs/libXpresent x11-libs/libXrandr x11-libs/libXrender x11-libs/libXres >=x11-libs/startup-notification-0.7 gnome-extra/zenity >=mate-base/mate-desktop-1.20.0 virtual/libintl >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libXRes.so.1 libXcomposite.so.1 libXcursor.so.1 libXdamage.so.1 libXext.so.6 libXfixes.so.3 libXpresent.so.1 libXrandr.so.2 libXrender.so.1 libatk-1.0.so.0 libc.so.6 libcairo.so.2 libcanberra-gtk3.so.0 libcanberra.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgtop-2.0.so.11 libm.so.6 libmate-desktop-2.so.17 libpango-1.0.so.0 libpangocairo-1.0.so.0 libstartup-notification-1.so.0
+RESTRICT: test
+SHA1: 521bec0b57f9d12ec6fec1cf18e2e17cee0a0c19
+SIZE: 1546240
+SLOT: 0/2
+USE: elibc_glibc kernel_linux ppc64 startup-notification
+MTIME: 1719406344
 REPO: gentoo
 
