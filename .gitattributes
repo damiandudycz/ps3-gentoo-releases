@@ -6,3 +6,5 @@ releases filter=lfs diff=lfs merge=lfs -text
 23.0-default/stage3-cell-openrc-20240609T222045Z.tar.xz filter=lfs diff=lfs merge=lfs -text
 23.0-default/stage3-cell-openrc-20240611T120555Z.tar.xz filter=lfs diff=lfs merge=lfs -text
 23.0-default/stage3-ppc64-openrc-20240606T030600Z.tar.xz filter=lfs diff=lfs merge=lfs -text
+23.0-default/stage3-cell-openrc-20240626T113406Z.tar.xz filter=lfs diff=lfs merge=lfs -text
+23.0-default/stage3-ppc64-openrc-20240620T023350Z.tar.xz filter=lfs diff=lfs merge=lfs -text
