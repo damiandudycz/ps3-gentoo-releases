@@ -8,3 +8,10 @@ releases filter=lfs diff=lfs merge=lfs -text
 23.0-default/stage3-ppc64-openrc-20240606T030600Z.tar.xz filter=lfs diff=lfs merge=lfs -text
 23.0-default/stage3-cell-openrc-20240626T113406Z.tar.xz filter=lfs diff=lfs merge=lfs -text
 23.0-default/stage3-ppc64-openrc-20240620T023350Z.tar.xz filter=lfs diff=lfs merge=lfs -text
+23.0-default/stage3-ppc64-openrc-20240627T030419Z.tar.xz filter=lfs diff=lfs merge=lfs -text
+23.0-default/stage3-cell-openrc-20240628T083418Z.tar.xz filter=lfs diff=lfs merge=lfs -text
+23.0-default/stage4-cell-xorg-openrc-20240628T083418Z.tar.xz filter=lfs diff=lfs merge=lfs -text
+23.0-default/livecd-stage1-cell-20240628T083418Z.tar.xz filter=lfs diff=lfs merge=lfs -text
+23.0-default/install-cell-minimal-20240628T083418Z.iso filter=lfs diff=lfs merge=lfs -text
+23.0-default/livecd-stage2-cell-openrc-20240628T083418Z.tar.bz2 filter=lfs diff=lfs merge=lfs -text
+23.0-default/stage4-cell-mate-openrc-20240628T083418Z.tar.xz filter=lfs diff=lfs merge=lfs -text
