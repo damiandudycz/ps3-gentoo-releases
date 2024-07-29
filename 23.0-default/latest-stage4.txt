@@ -1,3 +1,3 @@
-stage4-cell-mate-openrc-20240728T123401Z.tar.xz 725373784
-stage4-cell-openrc-20240728T123401Z.tar.xz 327401184
-stage4-cell-xorg-openrc-20240728T123401Z.tar.xz 456076168
+stage4-cell-mate-openrc-20240728T123401Z.tar.xz 134
+stage4-cell-openrc-20240729T113413Z.tar.xz 324377384
+stage4-cell-xorg-openrc-20240729T113413Z.tar.xz 456371820
