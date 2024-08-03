@@ -5,15 +5,15 @@ ACCEPT_RESTRICT: *
 ARCH: ppc64
 CBUILD: powerpc64-unknown-linux-gnu
 CHOST: powerpc64-unknown-linux-gnu
-CONFIG_PROTECT_MASK: /etc/ca-certificates.conf /etc/dconf /etc/env.d /etc/fonts/fonts.conf /etc/gconf /etc/gentoo-release /etc/sandbox.d
+CONFIG_PROTECT_MASK: /etc/ca-certificates.conf /etc/dconf /etc/env.d /etc/fonts/fonts.conf /etc/gconf /etc/gentoo-release /etc/revdep-rebuild /etc/sandbox.d
 ELIBC: glibc
 FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs binpkg-multi-instance buildpkg buildpkg-live clean-logs config-protect-if-modified distlocks ebuild-locks fixlafiles merge-sync merge-wait multilib-strict parallel-fetch parallel-install pkgdir-index-trusted preserve-libs protect-owned qa-unresolved-soname-deps sandbox sfperms strict unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync xattr
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: abi_ppc_64 prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 954
+PACKAGES: 977
 PROFILE: default/linux/ppc64/23.0/desktop
-TIMESTAMP: 1722635578
+TIMESTAMP: 1722642548
 USE: X a52 aac acl ada_target_gcc_12 alsa apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias big-endian bindist bluetooth branding bzip2 cairo calligra_features_karbon calligra_features_sheets calligra_features_words cdda cdr collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog cpu_flags_ppc_altivec crypt cups dbus dri dts dvd dvdr elibc_glibc elogind encode exif flac gdbm gif gpm gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gtk gui ibm iconv icu input_devices_evdev input_devices_libinput ipv6 jpeg kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_text lcms libnotify lua_single_target_lua5-1 lua_targets_lua5-1 mad mng mp3 mp4 mpeg ncurses nls office_implementation_libreoffice ogg opengl openmp pam pango pcre pdf php_targets_php8-2 png policykit postgres_targets_postgres15 ppc64 ppds ps3 python_single_target_python3_12 python_targets_python3_12 qt5 readline ruby_targets_ruby31 ruby_targets_ruby32 sdl seccomp sound spell ssl startup-notification svg test-rust tiff truetype udev udisks unicode upower usb video_cards_dummy video_cards_fbdev vorbis vulkan wxwidgets x264 xattr xcb xft xml xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_sysrq xtables_addons_tarpit xv xvid zlib
 USE_EXPAND: ABI_MIPS ABI_S390 ABI_X86 ADA_TARGET ALSA_CARDS AMDGPU_TARGETS APACHE2_MODULES APACHE2_MPMS CALLIGRA_FEATURES CAMERAS COLLECTD_PLUGINS CPU_FLAGS_ARM CPU_FLAGS_PPC CPU_FLAGS_X86 CURL_QUIC CURL_SSL ELIBC FFTOOLS GPSD_PROTOCOLS GRUB_PLATFORMS INPUT_DEVICES KERNEL L10N LCD_DEVICES LIBREOFFICE_EXTENSIONS LLVM_SLOT LLVM_TARGETS LUA_SINGLE_TARGET LUA_TARGETS MONKEYD_PLUGINS NGINX_MODULES_HTTP NGINX_MODULES_MAIL NGINX_MODULES_STREAM OFFICE_IMPLEMENTATION OPENMPI_FABRICS OPENMPI_OFED_FEATURES OPENMPI_RM PERL_FEATURES PHP_TARGETS POSTGRES_TARGETS PYTHON_SINGLE_TARGET PYTHON_TARGETS QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS RUBY_TARGETS SANE_BACKENDS UWSGI_PLUGINS VIDEO_CARDS VOICEMAIL_STORAGE XTABLES_ADDONS
 USE_EXPAND_HIDDEN: ABI_MIPS ABI_S390 ABI_X86 CPU_FLAGS_ARM CPU_FLAGS_X86 ELIBC KERNEL
@@ -1141,6 +1141,26 @@ SIZE: 3317760
 SLOT: 0/3.1
 USE: css elibc_glibc introspection kernel_linux libburn mp3 ppc64
 MTIME: 1720476924
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641421
+CPV: app-cdr/xfburn-0.7.0
+DEFINED_PHASES: configure postinst postrm prepare
+DEPEND: >=dev-libs/glib-2.38:2/2= >=dev-libs/libburn-0.4.2:0/0= >=dev-libs/libisofs-0.6.2:0/0= >=x11-libs/gtk+-3.20:3/3= >=xfce-base/exo-0.11.0:0/0= >=xfce-base/libxfce4ui-4.12.0:0/0= dev-libs/libgudev:0/0=
+EAPI: 8
+IUSE: gstreamer +udev
+KEYWORDS: amd64 arm arm64 ~ia64 ~loong ppc ppc64 ~riscv x86
+LICENSE: GPL-2+
+MD5: 0b188294e708e341b530b11b7031a45b
+PATH: app-cdr/xfburn/xfburn-0.7.0-1.gpkg.tar
+RDEPEND: >=dev-libs/glib-2.38:2/2= >=dev-libs/libburn-0.4.2:0/0= >=dev-libs/libisofs-0.6.2:0/0= >=x11-libs/gtk+-3.20:3/3= >=xfce-base/exo-0.11.0:0/0= >=xfce-base/libxfce4ui-4.12.0:0/0= dev-libs/libgudev:0/0= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libburn.so.4 libc.so.6 libexo-2.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgudev-1.0.so.0 libisofs.so.6 libxfce4ui-2.so.0 libxfce4util.so.7
+SHA1: fb96fc8628e4facc928823bee9eb783a30c96a74
+SIZE: 686080
+USE: elibc_glibc kernel_linux ppc64 udev
+MTIME: 1722641452
 REPO: gentoo
 
 BUILD_ID: 1
@@ -9905,6 +9925,23 @@ USE: X elibc_glibc kernel_linux nls ppc64 udisks
 MTIME: 1719407735
 REPO: gentoo
 
+BDEPEND: >=x11-apps/mkfontscale-1.2.0 media-fonts/encodings
+BUILD_ID: 1
+BUILD_TIME: 1722639634
+CPV: media-fonts/dejavu-2.37
+DEFINED_PHASES: compile install postinst postrm prepare setup unpack
+EAPI: 7
+IUSE: fontforge X
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~arm64-macos ~x64-macos
+LICENSE: BitstreamVera
+MD5: 261e97d56bd2f5d161d6b5b4445156fc
+PATH: media-fonts/dejavu/dejavu-2.37-1.gpkg.tar
+SHA1: a901c4ee997c62038635978b06f12cf7e1828bbc
+SIZE: 4024320
+USE: X elibc_glibc kernel_linux ppc64
+MTIME: 1722639644
+REPO: gentoo
+
 BDEPEND: x11-apps/mkfontscale >=app-portage/elt-patches-20240116 virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 BUILD_ID: 1
 BUILD_TIME: 1718195624
@@ -12206,6 +12243,28 @@ SHA1: 9ca3e1851c5446fae6e8f9a2e975e35514362026
 SIZE: 8099840
 USE: concheck elibc_glibc gtk-doc introspection kernel_linux modemmanager nss ppc64 ppp tools wext wifi
 MTIME: 1721913486
+REPO: gentoo
+
+BDEPEND: dev-util/gdbus-codegen dev-util/glib-utils dev-util/gtk-doc app-text/docbook-xml-dtd:4.1.2 >=sys-devel/gettext-0.17 virtual/pkgconfig || ( ( dev-lang/python:3.12 dev-python/pygobject:3[python_targets_python3_12(-)] ) ( dev-lang/python:3.11 dev-python/pygobject:3[python_targets_python3_11(-)] ) ( dev-lang/python:3.10 dev-python/pygobject:3[python_targets_python3_10(-)] ) ) dev-lang/perl dev-libs/libxslt app-arch/xz-utils >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array virtual/pkgconfig virtual/pkgconfig
+BUILD_ID: 2
+BUILD_TIME: 1722636594
+CPV: net-misc/networkmanager-1.46.0-r1
+DEFINED_PHASES: compile configure install postinst postrm prepare setup test
+DEPEND: sys-apps/util-linux >=sys-auth/elogind-219 >=virtual/libudev-175:0/1= sys-apps/dbus net-libs/libndp >=dev-libs/glib-2.42:2 >=dev-libs/gobject-introspection-0.10.3:0/0= >=sys-auth/polkit-0.106 dev-libs/nspr >=dev-libs/nss-3.11 >=net-dialup/ppp-2.4.5:0/2.5.0=[ipv6(+)] net-misc/mobile-broadband-provider-info >=net-misc/modemmanager-0.7.991:0/1= >=net-wireless/bluez-5:0/3= net-misc/curl >=dev-libs/newt-0.52.15 sys-libs/readline:0/8= >=sys-kernel/linux-headers-3.18 net-libs/libndp
+EAPI: 8
+IUSE: audit bluetooth +concheck connection-sharing debug dhclient dhcpcd elogind gnutls +gtk-doc +introspection iptables iwd psl libedit +nss nftables +modemmanager ofono ovs policykit +ppp resolvconf selinux syslog systemd teamd test +tools vala +wext +wifi abi_x86_32 abi_x86_64 abi_x86_x32 abi_mips_n32 abi_mips_n64 abi_mips_o32 abi_s390_32 abi_s390_64 test
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ppc ppc64 ~riscv ~sparc x86
+LICENSE: GPL-2+ LGPL-2.1+
+MD5: d8d6306bb51ead48619c1cc3537a3aab
+PATH: net-misc/networkmanager/networkmanager-1.46.0-r1-2.gpkg.tar
+PROVIDES: ppc_64: libnm-device-plugin-adsl.so libnm-device-plugin-bluetooth.so libnm-device-plugin-wifi.so libnm-device-plugin-wwan.so libnm-ppp-plugin.so libnm-wwan.so libnm.so.0 nm-pppd-plugin.so
+RDEPEND: sys-apps/util-linux >=sys-auth/elogind-219 >=virtual/libudev-175:0/1= sys-apps/dbus net-libs/libndp >=dev-libs/glib-2.42:2 >=dev-libs/gobject-introspection-0.10.3:0/0= >=sys-auth/polkit-0.106 dev-libs/nspr >=dev-libs/nss-3.11 >=net-dialup/ppp-2.4.5:0/2.5.0=[ipv6(+)] net-misc/mobile-broadband-provider-info >=net-misc/modemmanager-0.7.991:0/1= >=net-wireless/bluez-5:0/3= net-misc/curl >=dev-libs/newt-0.52.15 sys-libs/readline:0/8= acct-group/plugdev || ( net-misc/iputils[arping(+)] net-analyzer/arping ) >=net-wireless/wpa_supplicant-0.7.3-r3[dbus] >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: ld64.so.1 libbluetooth.so.3 libc.so.6 libcurl.so.4 libelogind.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libmm-glib.so.0 libndp.so.0 libnewt.so.0.52 libnspr4.so libnss3.so libreadline.so.8 libsmime3.so libudev.so.1
+RESTRICT: test test
+SHA1: 8ab0029592604ef8c5e3d82f503cf6ad309be3d2
+SIZE: 8140800
+USE: bluetooth concheck elibc_glibc elogind gtk-doc introspection kernel_linux modemmanager nss policykit ppc64 ppp tools wext wifi
+MTIME: 1722636609
 REPO: gentoo
 
 BDEPEND: acct-group/ntp acct-user/ntp virtual/pkgconfig >=app-portage/elt-patches-20240116 sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 virtual/pkgconfig
@@ -14711,7 +14770,6 @@ MD5: 9b6a3379c50fc0035485f7c7584c4f95
 PATH: sys-kernel/gentoo-kernel-ps3/gentoo-kernel-ps3-6.10.2-2.gpkg.tar
 PROVIDES: ppc_32: linux-vdso32.so.1 ppc_64: linux-vdso64.so.1
 RDEPEND: !sys-kernel/gentoo-kernel-bin:6.10.2 sys-apps/kmod[lzma] virtual/libelf >=sys-libs/glibc-2.39-r6
-REPO_REVISIONS: {}
 REQUIRES: ppc_64: libc.so.6
 RESTRICT: test
 SHA1: 2ba67cf19dfa6f2619ae1d0536fc5e9dc49e7ef0
@@ -15606,6 +15664,21 @@ SHA1: 75d4621c3d5befac724a98e07bcbe4d6ecefa806
 SIZE: 20480
 USE: elibc_glibc kernel_linux ppc64
 MTIME: 1718010889
+REPO: gentoo
+
+BUILD_ID: 1
+BUILD_TIME: 1722639700
+CPV: virtual/freedesktop-icon-theme-0-r4
+DEFINED_PHASES: -
+EAPI: 7
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux
+MD5: 5a6028ff2b5f143769aa7db2b8783a3a
+PATH: virtual/freedesktop-icon-theme/freedesktop-icon-theme-0-r4-1.gpkg.tar
+RDEPEND: || ( x11-themes/adwaita-icon-theme x11-themes/faenza-icon-theme lxde-base/lxde-icon-theme x11-themes/tango-icon-theme kde-frameworks/breeze-icons kde-frameworks/oxygen-icons x11-themes/mate-icon-theme x11-themes/elementary-xfce-icon-theme )
+SHA1: 0a26f661e0d72c75af9d56afd3ed8dc368ce0856
+SIZE: 20480
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1722639709
 REPO: gentoo
 
 BUILD_ID: 1
@@ -18641,6 +18714,25 @@ USE: elibc_glibc kernel_linux ppc64 python_targets_python3_12
 MTIME: 1719381913
 REPO: gentoo
 
+BDEPEND: dev-util/gdbus-codegen >=sys-devel/gettext-0.19.4 virtual/pkgconfig app-arch/xz-utils
+BUILD_ID: 1
+BUILD_TIME: 1722639836
+CPV: x11-misc/notification-daemon-3.20.0-r1
+DEFINED_PHASES: install
+DEPEND: >=dev-libs/glib-2.28:2 >=x11-libs/gtk+-3.19.5:3[X] sys-apps/dbus x11-libs/libX11 !x11-misc/notify-osd
+EAPI: 7
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ~mips ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
+LICENSE: GPL-2
+MD5: 407ade04b618770e5e64aa7488063b57
+PATH: x11-misc/notification-daemon/notification-daemon-3.20.0-r1-1.gpkg.tar
+RDEPEND: >=dev-libs/glib-2.28:2 >=x11-libs/gtk+-3.19.5:3[X] sys-apps/dbus x11-libs/libX11 !x11-misc/notify-osd >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libpango-1.0.so.0
+SHA1: 5366ca3e2c143595fb07dd57e51f022a1d023205
+SIZE: 92160
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1722639846
+REPO: gentoo
+
 BDEPEND: app-text/docbook-xml-dtd:4.1.2 app-text/xmlto sys-devel/gettext virtual/pkgconfig >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 BUILD_ID: 1
 BUILD_TIME: 1718201699
@@ -18867,6 +18959,26 @@ USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719389907
 REPO: gentoo
 
+BDEPEND: dev-libs/libxml2 dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641061
+CPV: x11-terms/xfce4-terminal-1.1.3
+DEFINED_PHASES: configure postinst postrm
+DEPEND: >=dev-libs/glib-2.44.0:2 >=dev-libs/libpcre2-10.00:0/3= >=x11-libs/gtk+-3.22.0:3[X] >=x11-libs/vte-0.51.3:2.91 >=xfce-base/libxfce4ui-4.17.5:0/0=[gtk3(+)] >=xfce-base/xfconf-4.16.0:0/3= >=x11-libs/libX11-1.6.7
+EAPI: 8
+IUSE: utempter wayland X
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux ~x64-solaris
+LICENSE: GPL-2+
+MD5: f3629f26612e42fb0212582e3b23f3fa
+PATH: x11-terms/xfce4-terminal/xfce4-terminal-1.1.3-1.gpkg.tar
+RDEPEND: >=dev-libs/glib-2.44.0:2 >=dev-libs/libpcre2-10.00:0/3= >=x11-libs/gtk+-3.22.0:3[X] >=x11-libs/vte-0.51.3:2.91 >=xfce-base/libxfce4ui-4.17.5:0/0=[gtk3(+)] >=xfce-base/xfconf-4.16.0:0/3= >=x11-libs/libX11-1.6.7 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libpango-1.0.so.0 libpcre2-8.so.0 libvte-2.91.so.0 libxfce4kbd-private-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: a180c011fcb20133a447b8a6863a8137890a3f10
+SIZE: 788480
+USE: X elibc_glibc kernel_linux ppc64
+MTIME: 1722641073
+REPO: gentoo
+
 BDEPEND: >=gnome-base/librsvg-2.48:2 sys-devel/gettext virtual/pkgconfig x11-libs/gtk+:3 app-arch/xz-utils >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array
 BUILD_ID: 1
 BUILD_TIME: 1718208053
@@ -19041,4 +19153,351 @@ USE: elibc_glibc kernel_linux ppc64 startup-notification
 MTIME: 1719406344
 REPO: gentoo
 
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641109
+CPV: xfce-base/exo-4.18.0
+DEFINED_PHASES: install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/libxfce4ui-4.15.1:0/0=[gtk3(+)] >=xfce-base/libxfce4util-4.17.2:0/7=
+EAPI: 8
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux ~x64-solaris
+LICENSE: GPL-2+ LGPL-2.1+
+MD5: 3d6ae642abc9797e24083fc85586b0dc
+PATH: xfce-base/exo/exo-4.18.0-1.gpkg.tar
+PROVIDES: ppc_64: libexo-2.so.0
+RDEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/libxfce4ui-4.15.1:0/0=[gtk3(+)] >=xfce-base/libxfce4util-4.17.2:0/7= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libharfbuzz.so.0 libm.so.6 libpango-1.0.so.0 libpangocairo-1.0.so.0 libxfce4ui-2.so.0 libxfce4util.so.7
+SHA1: 6ad0a32471f769501a48a88246869f504eeb6fb9
+SIZE: 583680
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1722641121
+REPO: gentoo
+
+BDEPEND: dev-util/glib-utils dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641083
+CPV: xfce-base/garcon-4.18.2
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/libxfce4util-4.15.6:0/7= >=xfce-base/libxfce4ui-4.15.7:0/0=
+EAPI: 8
+IUSE: introspection
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: LGPL-2+ FDL-1.1+
+MD5: 0b96477ddb76c8f2ac0eb9b510b9657d
+PATH: xfce-base/garcon/garcon-4.18.2-1.gpkg.tar
+PROVIDES: ppc_64: libgarcon-1.so.0 libgarcon-gtk3-1.so.0
+RDEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/libxfce4util-4.15.6:0/7= >=xfce-base/libxfce4ui-4.15.7:0/0= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgthread-2.0.so.0 libgtk-3.so.0 libharfbuzz.so.0 libpango-1.0.so.0 libpangocairo-1.0.so.0 libxfce4ui-2.so.0 libxfce4util.so.7
+SHA1: 56f20d936ea8e4903092e91a1262de271f3b9e48
+SIZE: 286720
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1722641093
+REPO: gentoo
+
+BDEPEND: dev-lang/perl dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722640735
+CPV: xfce-base/libxfce4ui-4.18.6
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3[introspection,X] x11-libs/libX11 x11-libs/libICE x11-libs/libSM >=xfce-base/libxfce4util-4.17.2:0/7=[introspection] >=xfce-base/xfconf-4.12:0/3= >=dev-libs/gobject-introspection-1.66:0/0= x11-libs/startup-notification
+EAPI: 8
+IUSE: glade +introspection startup-notification system-info vala
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: LGPL-2+ GPL-2+
+MD5: 06ed8e3a7e3b73cb231dd2fdc7fd5639
+PATH: xfce-base/libxfce4ui/libxfce4ui-4.18.6-1.gpkg.tar
+PROVIDES: ppc_64: libxfce4kbd-private-3.so.0 libxfce4ui-2.so.0
+RDEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3[introspection,X] x11-libs/libX11 x11-libs/libICE x11-libs/libSM >=xfce-base/libxfce4util-4.17.2:0/7=[introspection] >=xfce-base/xfconf-4.12:0/3= >=dev-libs/gobject-introspection-1.66:0/0= x11-libs/startup-notification >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libharfbuzz.so.0 libpango-1.0.so.0 libpangocairo-1.0.so.0 libstartup-notification-1.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: 583ac72b6b5c6957c815ba9b70dc4f2d80a18d46
+SIZE: 491520
+USE: elibc_glibc introspection kernel_linux ppc64 startup-notification
+MTIME: 1722640744
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722639865
+CPV: xfce-base/libxfce4util-4.18.2
+DEFINED_PHASES: configure install
+DEPEND: >=dev-libs/glib-2.66.0 >=dev-libs/gobject-introspection-1.66:0/0=
+EAPI: 8
+IUSE: +introspection vala
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux ~x64-solaris
+LICENSE: LGPL-2+ GPL-2+
+MD5: 99be063868f40f8c0a5f8332d58a50e4
+PATH: xfce-base/libxfce4util/libxfce4util-4.18.2-1.gpkg.tar
+PROVIDES: ppc_64: libxfce4util.so.7
+RDEPEND: >=dev-libs/glib-2.66.0 >=dev-libs/gobject-introspection-1.66:0/0= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0
+SHA1: f6410dbf22cb63311cb2ac09458d5759f2ce17d3
+SIZE: 256000
+SLOT: 0/7
+USE: elibc_glibc introspection kernel_linux ppc64
+MTIME: 1722639874
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722642207
+CPV: xfce-base/thunar-4.18.10
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gdk-pixbuf-2.40.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/exo-4.17.0:0/0= >=xfce-base/libxfce4ui-4.17.6:0/0= >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/xfconf-4.12:0/3= >=media-libs/libexif-0.6.19:0/0= >=x11-libs/libnotify-0.7 >=dev-libs/libpcre2-10.0:0/3= >=xfce-base/xfce4-panel-4.10:0/0= dev-libs/libgudev:0/0=
+EAPI: 8
+IUSE: exif introspection libnotify pcre +trash-panel-plugin udisks
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+ LGPL-2+
+MD5: b6ebda88ec2b58e634cdd56eb9d62254
+PATH: xfce-base/thunar/thunar-4.18.10-1.gpkg.tar
+PROVIDES: ppc_64: libthunar-tpa.so libthunarx-3.so.0 thunar-apr.so thunar-sbr.so thunar-uca.so thunar-wallpaper-plugin.so
+RDEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gdk-pixbuf-2.40.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/exo-4.17.0:0/0= >=xfce-base/libxfce4ui-4.17.6:0/0= >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/xfconf-4.12:0/3= >=media-libs/libexif-0.6.19:0/0= >=x11-libs/libnotify-0.7 >=dev-libs/libpcre2-10.0:0/3= >=xfce-base/xfce4-panel-4.10:0/0= dev-libs/libgudev:0/0= >=dev-util/desktop-file-utils-0.20-r1 x11-misc/shared-mime-info >=gnome-base/gvfs-1.18.3 >=gnome-base/gvfs-1.18.3[udisks,udev] virtual/udev >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libexif.so.12 libexo-2.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgudev-1.0.so.0 libharfbuzz.so.0 libnotify.so.4 libpango-1.0.so.0 libpangocairo-1.0.so.0 libpcre2-8.so.0 libxfce4kbd-private-3.so.0 libxfce4panel-2.0.so.4 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: 8a33db52522d969d42b4c36d3f66cd64debbc530
+SIZE: 2529280
+SLOT: 0/3
+USE: elibc_glibc exif kernel_linux libnotify pcre ppc64 trash-panel-plugin udisks
+MTIME: 1722642222
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722642442
+CPV: xfce-base/thunar-volman-4.18.0
+DEFINED_PHASES: configure postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 dev-libs/libgudev:0/0= >=x11-libs/gtk+-3.24.0:3 >=xfce-base/exo-0.10:0/0= >=xfce-base/libxfce4ui-4.12:0/0= >=xfce-base/libxfce4util-4.12:0/7= >=xfce-base/xfconf-4.12:0/3= >=x11-libs/libnotify-0.7
+EAPI: 8
+IUSE: libnotify
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ppc ppc64 ~riscv ~sparc x86
+LICENSE: GPL-2+ CC-BY-SA-3.0
+MD5: 08e6022e8d7fd4b7456509e62f4fa71e
+PATH: xfce-base/thunar-volman/thunar-volman-4.18.0-1.gpkg.tar
+RDEPEND: >=dev-libs/glib-2.66.0 dev-libs/libgudev:0/0= >=x11-libs/gtk+-3.24.0:3 >=xfce-base/exo-0.10:0/0= >=xfce-base/libxfce4ui-4.12:0/0= >=xfce-base/libxfce4util-4.12:0/7= >=xfce-base/xfconf-4.12:0/3= >=x11-libs/libnotify-0.7 virtual/udev >=xfce-base/thunar-1.6[udisks] >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libgudev-1.0.so.0 libnotify.so.4 libpango-1.0.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: e2061823ed1e31bc7ee9c760eb4d9ca79dffd1be
+SIZE: 225280
+USE: elibc_glibc kernel_linux libnotify ppc64
+MTIME: 1722642453
+REPO: gentoo
+
+BDEPEND: dev-util/gdbus-codegen dev-util/glib-utils dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722640752
+CPV: xfce-base/tumbler-4.18.2
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 media-libs/freetype:2/2= media-libs/libpng:0/16= >=sys-apps/dbus-1.6 >=xfce-base/libxfce4util-4.17.1:0/7= >=x11-libs/gdk-pixbuf-2.40.0 media-libs/libjpeg-turbo:0/0.2= >=app-text/poppler-0.12.4[cairo]
+EAPI: 8
+IUSE: curl epub ffmpeg gstreamer jpeg odf pdf raw
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+
+MD5: c00677e8eb2c6e4f934ff182996ab6cf
+PATH: xfce-base/tumbler/tumbler-4.18.2-1.gpkg.tar
+PROVIDES: ppc_64: libtumbler-1.so.0 tumbler-desktop-thumbnailer.so tumbler-font-thumbnailer.so tumbler-jpeg-thumbnailer.so tumbler-pixbuf-thumbnailer.so tumbler-poppler-thumbnailer.so tumbler-xdg-cache.so
+RDEPEND: >=dev-libs/glib-2.66.0 media-libs/freetype:2/2= media-libs/libpng:0/16= >=sys-apps/dbus-1.6 >=xfce-base/libxfce4util-4.17.1:0/7= >=x11-libs/gdk-pixbuf-2.40.0 media-libs/libjpeg-turbo:0/0.2= >=app-text/poppler-0.12.4[cairo] >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libcairo.so.2 libfreetype.so.6 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgthread-2.0.so.0 libjpeg.so.62 libm.so.6 libpng16.so.16 libpoppler-glib.so.8 libxfce4util.so.7
+SHA1: 2b940101ebd675f292d77a0d0cdb54d64b1dafa9
+SIZE: 296960
+USE: elibc_glibc jpeg kernel_linux pdf ppc64
+MTIME: 1722640762
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641414
+CPV: xfce-base/xfce4-appfinder-4.18.1
+DEFINED_PHASES: postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/garcon-0.3:0/0= >=xfce-base/libxfce4util-4.15.2:0/7= >=xfce-base/libxfce4ui-4.14:0/0=[gtk3(+)] >=xfce-base/xfconf-4.14:0/3=
+EAPI: 8
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+
+MD5: d2143ea1ddabe6b56d2823ed5378afe5
+PATH: xfce-base/xfce4-appfinder/xfce4-appfinder-4.18.1-1.gpkg.tar
+RDEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=xfce-base/garcon-0.3:0/0= >=xfce-base/libxfce4util-4.15.2:0/7= >=xfce-base/libxfce4ui-4.14:0/0=[gtk3(+)] >=xfce-base/xfconf-4.14:0/3= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libgarcon-1.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: 7edbb5135f9c2b39b2a0cf54453192e01a8fb661
+SIZE: 317440
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1722641437
+REPO: gentoo
+
+BUILD_ID: 1
+BUILD_TIME: 1722642538
+CPV: xfce-base/xfce4-meta-4.18-r1
+DEFINED_PHASES: -
+EAPI: 8
+IUSE: archive calendar cdr editor image media minimal mpd pulseaudio remote-fs search +svg upower
+KEYWORDS: amd64 arm arm64 ~ia64 ~loong ~ppc ppc64 ~riscv x86
+LICENSE: metapackage
+MD5: ddc9aebe1027543e98ca9565e64d6b37
+PATH: xfce-base/xfce4-meta/xfce4-meta-4.18-r1-1.gpkg.tar
+RDEPEND: x11-themes/hicolor-icon-theme >=xfce-base/exo-4.18.0 >=xfce-base/garcon-4.18.0 >=xfce-base/libxfce4ui-4.18.0 >=xfce-base/libxfce4util-4.18.0 >=xfce-base/thunar-4.18.0 >=xfce-base/thunar-volman-4.18.0 >=xfce-base/tumbler-4.18.0 >=xfce-base/xfce4-appfinder-4.18.0 >=xfce-base/xfce4-panel-4.18.0 >=xfce-base/xfce4-session-4.18.0 >=xfce-base/xfce4-settings-4.18.0 x11-terms/xfce4-terminal >=xfce-base/xfconf-4.18.0 >=xfce-base/xfdesktop-4.18.0 >=xfce-base/xfwm4-4.18.0 media-fonts/dejavu virtual/freedesktop-icon-theme app-cdr/xfburn gnome-base/librsvg >=xfce-base/xfce4-power-manager-4.18.0
+REPO_REVISIONS: {}
+SHA1: c62dc71af26dfcd028524a132b7a31fbd1385942
+SIZE: 20480
+USE: cdr elibc_glibc kernel_linux ppc64 svg upower
+MTIME: 1722642546
+REPO: gentoo
+
+BDEPEND: dev-lang/perl dev-util/gdbus-codegen dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641685
+CPV: xfce-base/xfce4-panel-4.18.6
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/cairo-1.16.0 >=x11-libs/gtk+-3.24.0:3 x11-libs/libX11 x11-libs/libwnck:3 >=xfce-base/exo-0.11.2:0/0= >=xfce-base/garcon-4.17.0:0/0= >=xfce-base/libxfce4ui-4.17.1:0/0= >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/xfconf-4.13:0/3= >=dev-libs/libdbusmenu-16.04.0[gtk3]
+EAPI: 8
+IUSE: +dbusmenu introspection vala
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+ LGPL-2.1+
+MD5: dfb70428f74aa701abe412c1a663b633
+PATH: xfce-base/xfce4-panel/xfce4-panel-4.18.6-1.gpkg.tar
+PROVIDES: ppc_64: libactions.so libapplicationsmenu.so libclock.so libdirectorymenu.so liblauncher.so libpager.so libseparator.so libshowdesktop.so libsystray.so libtasklist.so libwindowmenu.so libxfce4panel-2.0.so.4
+RDEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/cairo-1.16.0 >=x11-libs/gtk+-3.24.0:3 x11-libs/libX11 x11-libs/libwnck:3 >=xfce-base/exo-0.11.2:0/0= >=xfce-base/garcon-4.17.0:0/0= >=xfce-base/libxfce4ui-4.17.1:0/0= >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/xfconf-4.13:0/3= >=dev-libs/libdbusmenu-16.04.0[gtk3] >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libXext.so.6 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libdbusmenu-glib.so.4 libdbusmenu-gtk3.so.4 libexo-2.so.0 libgarcon-1.so.0 libgarcon-gtk3-1.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgthread-2.0.so.0 libgtk-3.so.0 libharfbuzz.so.0 libm.so.6 libpango-1.0.so.0 libpangocairo-1.0.so.0 libwnck-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: 9bd8f94f2e32d5a377325e3a01196b15a4e313af
+SIZE: 1464320
+USE: dbusmenu elibc_glibc kernel_linux ppc64
+MTIME: 1722641697
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722642066
+CPV: xfce-base/xfce4-power-manager-4.18.4
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=sys-power/upower-0.99.0 >=x11-libs/gtk+-3.24.0:3 >=x11-libs/libnotify-0.7 x11-libs/libX11 >=x11-libs/libXrandr-1.2 x11-libs/libXext x11-libs/libXtst >=xfce-base/xfconf-4.12:0/3= >=xfce-base/libxfce4ui-4.18.4:0/0=[gtk3(+)] >=xfce-base/libxfce4util-4.12:0/7= >=xfce-base/xfce4-panel-4.12:0/0= >=sys-auth/polkit-0.112 x11-base/xorg-proto
+EAPI: 8
+IUSE: networkmanager +panel-plugin policykit
+KEYWORDS: ~alpha amd64 arm arm64 ~ia64 ~loong ppc ppc64 ~riscv x86
+LICENSE: GPL-2+
+MD5: 838f10e65c6430050dcf72516741a116
+PATH: xfce-base/xfce4-power-manager/xfce4-power-manager-4.18.4-1.gpkg.tar
+PROVIDES: ppc_64: libxfce4powermanager.so
+RDEPEND: >=dev-libs/glib-2.66.0 >=sys-power/upower-0.99.0 >=x11-libs/gtk+-3.24.0:3 >=x11-libs/libnotify-0.7 x11-libs/libX11 >=x11-libs/libXrandr-1.2 x11-libs/libXext x11-libs/libXtst >=xfce-base/xfconf-4.12:0/3= >=xfce-base/libxfce4ui-4.18.4:0/0=[gtk3(+)] >=xfce-base/libxfce4util-4.12:0/7= >=xfce-base/xfce4-panel-4.12:0/0= >=sys-auth/polkit-0.112 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libXext.so.6 libXrandr.so.2 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgmodule-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libharfbuzz.so.0 libm.so.6 libnotify.so.4 libpango-1.0.so.0 libpangocairo-1.0.so.0 libupower-glib.so.3 libxfce4panel-2.0.so.4 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: 7c69ebffc75706a3bc072335e586aeb7600b5115
+SIZE: 890880
+USE: elibc_glibc kernel_linux panel-plugin policykit ppc64
+MTIME: 1722642084
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722642058
+CPV: xfce-base/xfce4-session-4.18.4
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 x11-libs/libSM x11-libs/libwnck:3 x11-libs/libX11 >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/libxfce4ui-4.18.2:0/0= >=xfce-base/xfconf-4.12:0/3= >=sys-auth/polkit-0.102
+EAPI: 8
+IUSE: nls policykit +xscreensaver
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+
+MD5: 5960312b36387ab2c13503c293def673
+PATH: xfce-base/xfce4-session/xfce4-session-4.18.4-1.gpkg.tar
+RDEPEND: >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 x11-libs/libSM x11-libs/libwnck:3 x11-libs/libX11 >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/libxfce4ui-4.18.2:0/0= >=xfce-base/xfconf-4.12:0/3= >=sys-auth/polkit-0.102 x11-apps/iceauth x11-apps/xrdb x11-misc/xdg-user-dirs || ( xfce-extra/xfce4-screensaver >=x11-misc/xscreensaver-5.26 x11-misc/light-locker ) >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libICE.so.6 libSM.so.6 libX11.so.6 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libpango-1.0.so.0 libpolkit-gobject-1.so.0 libwnck-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: b8550f99c9725bf64d3466484d659b8cad4c9138
+SIZE: 634880
+USE: elibc_glibc kernel_linux nls policykit ppc64 xscreensaver
+MTIME: 1722642070
+REPO: gentoo
+
+BDEPEND: dev-util/gdbus-codegen dev-util/intltool virtual/pkgconfig sys-devel/gettext
+BUILD_ID: 1
+BUILD_TIME: 1722641574
+CPV: xfce-base/xfce4-settings-4.18.6
+DEFINED_PHASES: configure postinst postrm prepare setup
+DEPEND: dev-lang/python:3.12 >=dev-libs/glib-2.66.0 media-libs/fontconfig >=x11-libs/gtk+-3.24.0:3 x11-libs/libX11 >=x11-libs/libXcursor-1.1 >=x11-libs/libXi-1.3 >=x11-libs/libXrandr-1.2 >=xfce-base/garcon-0.2:0/0= >=xfce-base/exo-4.15.1:0/0= >=xfce-base/libxfce4ui-4.17.0:0/0= >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/xfconf-4.13:0/3= x11-drivers/xf86-input-libinput >=x11-libs/libnotify-0.7 >=sys-power/upower-0.9.23 >=x11-libs/libxklavier-5 x11-base/xorg-proto
+EAPI: 8
+IUSE: colord input_devices_libinput libcanberra libnotify upower +xklavier python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13
+KEYWORDS: amd64 arm arm64 ~hppa ~ia64 ~loong ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+
+MD5: 4376406cf44867a3d567d9c5428c1e1c
+PATH: xfce-base/xfce4-settings/xfce4-settings-4.18.6-1.gpkg.tar
+RDEPEND: dev-lang/python:3.12 >=dev-libs/glib-2.66.0 media-libs/fontconfig >=x11-libs/gtk+-3.24.0:3 x11-libs/libX11 >=x11-libs/libXcursor-1.1 >=x11-libs/libXi-1.3 >=x11-libs/libXrandr-1.2 >=xfce-base/garcon-0.2:0/0= >=xfce-base/exo-4.15.1:0/0= >=xfce-base/libxfce4ui-4.17.0:0/0= >=xfce-base/libxfce4util-4.17.2:0/7= >=xfce-base/xfconf-4.13:0/3= x11-drivers/xf86-input-libinput >=x11-libs/libnotify-0.7 >=sys-power/upower-0.9.23 >=x11-libs/libxklavier-5 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libXcursor.so.1 libXi.so.6 libXrandr.so.2 libatk-1.0.so.0 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libexo-2.so.0 libfontconfig.so.1 libgarcon-1.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libnotify.so.4 libpango-1.0.so.0 libpangocairo-1.0.so.0 libupower-glib.so.3 libxfce4kbd-private-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3 libxklavier.so.16
+SHA1: 2e89ee676edb6d7c87323e7b4b8fdab6891b7e56
+SIZE: 1392640
+USE: elibc_glibc input_devices_libinput kernel_linux libnotify ppc64 python_single_target_python3_12 upower xklavier
+MTIME: 1722641588
+REPO: gentoo
+
+BDEPEND: dev-util/gdbus-codegen dev-util/glib-utils dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722640298
+CPV: xfce-base/xfconf-4.18.3
+DEFINED_PHASES: configure install test
+DEPEND: >=dev-libs/glib-2.66.0 sys-apps/dbus >=xfce-base/libxfce4util-4.17.3:0/7= >=dev-libs/gobject-introspection-1.66:0/0=
+EAPI: 8
+IUSE: debug +introspection vala
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux ~x64-solaris
+LICENSE: GPL-2+
+MD5: b65a59aa1dd6220470a39ab5a5d10076
+PATH: xfce-base/xfconf/xfconf-4.18.3-1.gpkg.tar
+PROVIDES: ppc_64: libxfconf-0.so.3 libxfconfgsettingsbackend.so
+RDEPEND: >=dev-libs/glib-2.66.0 sys-apps/dbus >=xfce-base/libxfce4util-4.17.3:0/7= >=dev-libs/gobject-introspection-1.66:0/0= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgthread-2.0.so.0 libxfce4util.so.7
+SHA1: afb08282c5c66d54d18405c45adc1ba72f683032
+SIZE: 348160
+SLOT: 0/3
+USE: elibc_glibc introspection kernel_linux ppc64
+MTIME: 1722640310
+REPO: gentoo
+
+BDEPEND: dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722642480
+CPV: xfce-base/xfdesktop-4.18.1
+DEFINED_PHASES: configure postinst postrm
+DEPEND: >=x11-libs/cairo-1.16 >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=x11-libs/libwnck-3.14:3 x11-libs/libX11 >=xfce-base/exo-0.11:0/0= >=xfce-base/garcon-0.6:0/0= >=xfce-base/libxfce4ui-4.13:0/0= >=xfce-base/libxfce4util-4.13:0/7= >=xfce-base/xfconf-4.12.1:0/3= >=x11-libs/libnotify-0.7:0/0= >=xfce-base/thunar-4.17.10:0/3=
+EAPI: 8
+IUSE: libnotify +thunar
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+
+MD5: c59da15bd5d3f071de29df51aae6f2bc
+PATH: xfce-base/xfdesktop/xfdesktop-4.18.1-1.gpkg.tar
+RDEPEND: >=x11-libs/cairo-1.16 >=dev-libs/glib-2.66.0 >=x11-libs/gtk+-3.24.0:3 >=x11-libs/libwnck-3.14:3 x11-libs/libX11 >=xfce-base/exo-0.11:0/0= >=xfce-base/garcon-0.6:0/0= >=xfce-base/libxfce4ui-4.13:0/0= >=xfce-base/libxfce4util-4.13:0/7= >=xfce-base/xfconf-4.12.1:0/3= >=x11-libs/libnotify-0.7:0/0= >=xfce-base/thunar-4.17.10:0/3= >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libc.so.6 libcairo-gobject.so.2 libcairo.so.2 libexo-2.so.0 libgarcon-1.so.0 libgarcon-gtk3-1.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libnotify.so.4 libpango-1.0.so.0 libthunarx-3.so.0 libwnck-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: f68f009704906a4303c2531d9c20fe458873082e
+SIZE: 1894400
+USE: elibc_glibc kernel_linux libnotify ppc64 thunar
+MTIME: 1722642500
+REPO: gentoo
+
+BDEPEND: dev-libs/glib dev-util/intltool sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641112
+CPV: xfce-base/xfwm4-4.18.0
+DEFINED_PHASES: configure postinst postrm
+DEPEND: >=x11-libs/gtk+-3.24.0:3 x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXrender x11-libs/libXres x11-libs/pango >=x11-libs/libwnck-3.14:3 >=xfce-base/libxfce4util-4.10:0/7= >=xfce-base/libxfce4ui-4.12:0/0= >=xfce-base/xfconf-4.13:0/3= media-libs/libepoxy:0/0=[X(+)] x11-libs/startup-notification x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXpresent
+EAPI: 8
+IUSE: opengl startup-notification +xcomposite +xpresent
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~ia64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86 ~amd64-linux ~x86-linux
+LICENSE: GPL-2+
+MD5: b0faafba1c9864b87a8a161b76f51531
+PATH: xfce-base/xfwm4/xfwm4-4.18.0-1.gpkg.tar
+RDEPEND: >=x11-libs/gtk+-3.24.0:3 x11-libs/libX11 x11-libs/libXext x11-libs/libXi x11-libs/libXinerama x11-libs/libXrandr x11-libs/libXrender x11-libs/libXres x11-libs/pango >=x11-libs/libwnck-3.14:3 >=xfce-base/libxfce4util-4.10:0/7= >=xfce-base/libxfce4ui-4.12:0/0= >=xfce-base/xfconf-4.13:0/3= media-libs/libepoxy:0/0=[X(+)] x11-libs/startup-notification x11-libs/libXcomposite x11-libs/libXdamage x11-libs/libXfixes x11-libs/libXpresent >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libX11.so.6 libXRes.so.1 libXcomposite.so.1 libXdamage.so.1 libXext.so.6 libXfixes.so.3 libXi.so.6 libXinerama.so.1 libXpresent.so.1 libXrandr.so.2 libXrender.so.1 libc.so.6 libcairo.so.2 libepoxy.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libpango-1.0.so.0 libpangocairo-1.0.so.0 libstartup-notification-1.so.0 libwnck-3.so.0 libxfce4kbd-private-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3
+SHA1: 656a95f4405c3d8cedf4bb71cc4128b25612caa4
+SIZE: 931840
+USE: elibc_glibc kernel_linux opengl ppc64 startup-notification xcomposite xpresent
+MTIME: 1722641128
+REPO: gentoo
+
+BDEPEND: dev-util/glib-utils dev-util/intltool sys-apps/dbus virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1722641493
+CPV: xfce-extra/xfce4-screensaver-4.18.3
+DEFINED_PHASES: configure install postinst postrm
+DEPEND: >=dev-libs/dbus-glib-0.30 >=dev-libs/glib-2.50.0:2 >=x11-libs/gtk+-3.24.0:3 >=x11-libs/libwnck-3.20:3 x11-libs/libICE:0/0= x11-libs/libX11:0/0= x11-libs/libXScrnSaver:0/0= x11-libs/libXext:0/0= x11-libs/libXxf86vm:0/0= >=x11-libs/libXrandr-1.3:0/0= >=x11-libs/libxklavier-5.2:0/16= >=xfce-base/garcon-0.5.0:0/0= >=xfce-base/libxfce4ui-4.18.4:0/0= >=xfce-base/libxfce4util-4.12.1:0/7= >=xfce-base/xfconf-4.12.1:0/3= sys-auth/elogind sys-libs/pam virtual/opengl
+EAPI: 8
+IUSE: elogind +locking opengl pam systemd
+KEYWORDS: ~alpha amd64 arm ~arm64 ~loong ppc ppc64 ~riscv x86
+LICENSE: GPL-2+ LGPL-2+
+MD5: da179ee7880864b07fb32ff0894784f7
+PATH: xfce-extra/xfce4-screensaver/xfce4-screensaver-4.18.3-1.gpkg.tar
+RDEPEND: >=dev-libs/dbus-glib-0.30 >=dev-libs/glib-2.50.0:2 >=x11-libs/gtk+-3.24.0:3 >=x11-libs/libwnck-3.20:3 x11-libs/libICE:0/0= x11-libs/libX11:0/0= x11-libs/libXScrnSaver:0/0= x11-libs/libXext:0/0= x11-libs/libXxf86vm:0/0= >=x11-libs/libXrandr-1.3:0/0= >=x11-libs/libxklavier-5.2:0/16= >=xfce-base/garcon-0.5.0:0/0= >=xfce-base/libxfce4ui-4.18.4:0/0= >=xfce-base/libxfce4util-4.12.1:0/7= >=xfce-base/xfconf-4.12.1:0/3= sys-auth/elogind sys-libs/pam virtual/opengl >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libGL.so.1 libX11.so.6 libXext.so.6 libXss.so.1 libc.so.6 libcairo.so.2 libdbus-1.so.3 libdbus-glib-1.so.2 libelogind.so.0 libgarcon-1.so.0 libgdk-3.so.0 libgdk_pixbuf-2.0.so.0 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgtk-3.so.0 libm.so.6 libpam.so.0 libpango-1.0.so.0 libwnck-3.so.0 libxfce4ui-2.so.0 libxfce4util.so.7 libxfconf-0.so.3 libxklavier.so.16
+SHA1: 6ae85915d90ad72c6d145921b71fd217e36ab329
+SIZE: 440320
+USE: elibc_glibc elogind kernel_linux locking opengl pam ppc64
+MTIME: 1722641510
+REPO: gentoo
 
