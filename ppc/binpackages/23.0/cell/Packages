@@ -5,17 +5,16 @@ ACCEPT_RESTRICT: *
 ARCH: ppc64
 CBUILD: powerpc64-unknown-linux-gnu
 CHOST: powerpc64-unknown-linux-gnu
-CONFIG_PROTECT: /etc/locale.gen
 CONFIG_PROTECT_MASK: /etc/ca-certificates.conf /etc/env.d /etc/gconf /etc/gentoo-release /etc/sandbox.d
 ELIBC: glibc
-FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs binpkg-multi-instance buildpkg buildpkg-live ccache clean-logs config-protect-if-modified distlocks ebuild-locks fixlafiles merge-sync merge-wait multilib-strict parallel-fetch parallel-install pkgdir-index-trusted preserve-libs protect-owned qa-unresolved-soname-deps sandbox sfperms strict unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync
+FEATURES: assume-digests binpkg-docompress binpkg-dostrip binpkg-logs binpkg-multi-instance buildpkg buildpkg-live ccache clean-logs config-protect-if-modified distlocks ebuild-locks fixlafiles merge-sync merge-wait multilib-strict parallel-fetch parallel-install pkgdir-index-trusted preserve-libs protect-owned qa-unresolved-soname-deps sandbox sfperms strict unknown-features-warn unmerge-logs unmerge-orphans userfetch userpriv usersandbox usersync xattr
 GENTOO_MIRRORS: http://distfiles.gentoo.org
 IUSE_IMPLICIT: abi_ppc_64 prefix prefix-guest prefix-stack
 KERNEL: linux
-PACKAGES: 1189
-PROFILE: default/linux/ppc64/23.0/desktop
-TIMESTAMP: 1727839958
-USE: X a52 aac acl ada_target_gcc_12 alsa apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias big-endian bindist bluetooth branding bzip2 cairo calligra_features_karbon calligra_features_sheets calligra_features_words cdda cdr collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog cpu_flags_ppc_altivec crypt cups dbus dri dts dvd dvdr elibc_glibc elogind encode exif flac gdbm gif gpm gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox gtk gui guile_single_target_3-0 guile_targets_3-0 ibm iconv icu input_devices_libinput ipv6 jpeg kernel_linux kf6compat lcd_devices_bayrad lcd_devices_cfontz lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_text lcms libnotify lua_single_target_lua5-1 lua_targets_lua5-1 mad mng mp3 mp4 mpeg ncurses nls office_implementation_libreoffice ogg opengl openmp pam pango pcre pdf php_targets_php8-2 png policykit postgres_targets_postgres16 ppc64 ppds python_single_target_python3_12 python_targets_python3_12 qml qt5 qt6 readline ruby_targets_ruby31 ruby_targets_ruby32 sdl seccomp sound spell ssl startup-notification svg test-rust tiff truetype udev udisks unicode upower usb video_cards_dummy video_cards_fbdev video_cards_mga video_cards_r128 video_cards_radeon vorbis vulkan wayland wxwidgets x264 xattr xcb xft xml xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_sysrq xtables_addons_tarpit xv xvid zlib
+PACKAGES: 1203
+PROFILE: default/linux/ppc64/23.0
+TIMESTAMP: 1727847119
+USE: acl ada_target_gcc_12 apache2_modules_actions apache2_modules_alias apache2_modules_auth_basic apache2_modules_authn_anon apache2_modules_authn_core apache2_modules_authn_dbm apache2_modules_authn_file apache2_modules_authz_core apache2_modules_authz_dbm apache2_modules_authz_groupfile apache2_modules_authz_host apache2_modules_authz_owner apache2_modules_authz_user apache2_modules_autoindex apache2_modules_cache apache2_modules_cgi apache2_modules_cgid apache2_modules_dav apache2_modules_dav_fs apache2_modules_dav_lock apache2_modules_deflate apache2_modules_dir apache2_modules_env apache2_modules_expires apache2_modules_ext_filter apache2_modules_file_cache apache2_modules_filter apache2_modules_headers apache2_modules_include apache2_modules_info apache2_modules_log_config apache2_modules_logio apache2_modules_mime apache2_modules_mime_magic apache2_modules_negotiation apache2_modules_rewrite apache2_modules_setenvif apache2_modules_socache_shmcb apache2_modules_speling apache2_modules_status apache2_modules_unique_id apache2_modules_unixd apache2_modules_userdir apache2_modules_usertrack apache2_modules_vhost_alias big-endian bindist bzip2 calligra_features_karbon calligra_features_sheets calligra_features_words collectd_plugins_df collectd_plugins_interface collectd_plugins_irq collectd_plugins_load collectd_plugins_memory collectd_plugins_rrdtool collectd_plugins_swap collectd_plugins_syslog cpu_flags_ppc_altivec crypt elibc_glibc gdbm gpsd_protocols_aivdm gpsd_protocols_ashtech gpsd_protocols_earthmate gpsd_protocols_evermore gpsd_protocols_fv18 gpsd_protocols_garmin gpsd_protocols_garmintxt gpsd_protocols_gpsclock gpsd_protocols_greis gpsd_protocols_isync gpsd_protocols_itrax gpsd_protocols_mtk3301 gpsd_protocols_navcom gpsd_protocols_ntrip gpsd_protocols_oceanserver gpsd_protocols_oncore gpsd_protocols_rtcm104v2 gpsd_protocols_rtcm104v3 gpsd_protocols_sirf gpsd_protocols_skytraq gpsd_protocols_superstar2 gpsd_protocols_tnt gpsd_protocols_tripmate gpsd_protocols_tsip gpsd_protocols_ublox guile_single_target_3-0 guile_targets_3-0 ibm iconv input_devices_evdev input_devices_libinput ipv6 kernel_linux lcd_devices_bayrad lcd_devices_cfontz lcd_devices_glk lcd_devices_hd44780 lcd_devices_lb216 lcd_devices_lcdm001 lcd_devices_mtxorb lcd_devices_text lua_single_target_lua5-1 lua_targets_lua5-1 ncurses nls office_implementation_libreoffice openmp pam pcre php_targets_php8-2 postgres_targets_postgres16 ppc64 ps3 python_single_target_python3_12 python_targets_python3_12 readline ruby_targets_ruby31 ruby_targets_ruby32 seccomp ssl test-rust unicode video_cards_dummy video_cards_fbdev xattr xtables_addons_account xtables_addons_chaos xtables_addons_condition xtables_addons_delude xtables_addons_dhcpmac xtables_addons_fuzzy xtables_addons_geoip xtables_addons_iface xtables_addons_ipmark xtables_addons_ipp2p xtables_addons_ipv4options xtables_addons_length2 xtables_addons_logmark xtables_addons_lscan xtables_addons_pknock xtables_addons_proto xtables_addons_psd xtables_addons_quota2 xtables_addons_sysrq xtables_addons_tarpit zlib
 USE_EXPAND: ABI_MIPS ABI_S390 ABI_X86 ADA_TARGET ALSA_CARDS AMDGPU_TARGETS APACHE2_MODULES APACHE2_MPMS CALLIGRA_FEATURES CAMERAS COLLECTD_PLUGINS CPU_FLAGS_ARM CPU_FLAGS_PPC CPU_FLAGS_X86 CURL_QUIC CURL_SSL ELIBC FFTOOLS GPSD_PROTOCOLS GRUB_PLATFORMS GUILE_SINGLE_TARGET GUILE_TARGETS INPUT_DEVICES KERNEL L10N LCD_DEVICES LIBREOFFICE_EXTENSIONS LLVM_SLOT LLVM_TARGETS LUA_SINGLE_TARGET LUA_TARGETS NGINX_MODULES_HTTP NGINX_MODULES_MAIL NGINX_MODULES_STREAM OFFICE_IMPLEMENTATION OPENMPI_FABRICS OPENMPI_OFED_FEATURES OPENMPI_RM PERL_FEATURES PHP_TARGETS POSTGRES_TARGETS PYTHON_SINGLE_TARGET PYTHON_TARGETS QEMU_SOFTMMU_TARGETS QEMU_USER_TARGETS RUBY_TARGETS SANE_BACKENDS UWSGI_PLUGINS VIDEO_CARDS VOICEMAIL_STORAGE XTABLES_ADDONS
 USE_EXPAND_HIDDEN: ABI_MIPS ABI_S390 ABI_X86 CPU_FLAGS_ARM CPU_FLAGS_X86 ELIBC KERNEL
 USE_EXPAND_IMPLICIT: ARCH ELIBC KERNEL
@@ -1508,6 +1507,29 @@ USE: cxx elibc_glibc kernel_linux ppc64 python_targets_python3_12
 MTIME: 1727633642
 REPO: gentoo
 
+BDEPEND: dev-python/setuptools[python_targets_python3_12(-)] >=app-portage/elt-patches-20240116
+BUILD_ID: 2
+BUILD_TIME: 1727842617
+CPV: app-crypt/gpgme-1.23.2-r1
+DEFINED_PHASES: compile configure install prepare test unpack
+DEPEND: >=app-crypt/gnupg-2 >=dev-libs/libassuan-2.5.3:0/0= >=dev-libs/libgpg-error-1.46-r1:0/0= dev-qt/qtcore:5 dev-qt/qtbase:6
+EAPI: 8
+IUSE: common-lisp static-libs +cxx python qt5 qt6 test python_targets_python3_10 python_targets_python3_11 python_targets_python3_12 python_targets_python3_13 debug verify-sig
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris
+LICENSE: GPL-2 LGPL-2.1
+MD5: ba9bc4828d87ec0e668d2fdea5517c7d
+PATH: app-crypt/gpgme/gpgme-1.23.2-r1-2.gpkg.tar
+PROVIDES: ppc_64: libgpgme.so.11 libgpgmepp.so.6 libqgpgme.so.15 libqgpgmeqt6.so.15
+RDEPEND: >=app-crypt/gnupg-2 >=dev-libs/libassuan-2.5.3:0/0= >=dev-libs/libgpg-error-1.46-r1:0/0= dev-qt/qtcore:5 dev-qt/qtbase:6 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: ld64.so.1 libQt5Core.so.5 libQt6Core.so.6 libassuan.so.0 libc.so.6 libgcc_s.so.1 libgpg-error.so.0 libm.so.6 libstdc++.so.6
+RESTRICT: test
+SHA1: 825bbd8c4493d3558a38b3153d3941edf1b167b8
+SIZE: 1587200
+SLOT: 1/11.6.15.2
+USE: cxx elibc_glibc kernel_linux ppc64 python_targets_python3_12 qt5 qt6
+MTIME: 1727842628
+REPO: gentoo
+
 BDEPEND: >=app-portage/elt-patches-20240116 sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
 BUILD_ID: 1
 BUILD_TIME: 1718018059
@@ -1716,6 +1738,27 @@ SHA1: 42c9f317566c7cc71bdac9843e7caa6a407fee95
 SIZE: 215040
 USE: X elibc_glibc gtk kernel_linux ncurses ppc64 qt5
 MTIME: 1722623371
+REPO: gentoo
+
+BDEPEND: sys-devel/gettext virtual/pkgconfig >=app-portage/elt-patches-20240116 sys-devel/gnuconfig || ( >=dev-build/automake-1.17-r1:1.17 >=dev-build/automake-1.16.5:1.16 ) || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3
+BUILD_ID: 3
+BUILD_TIME: 1727843714
+CPV: app-crypt/pinentry-1.3.0-r3
+DEFINED_PHASES: configure install postinst postrm prepare unpack
+DEPEND: >=dev-libs/libassuan-2.1:0/0= >=dev-libs/libgcrypt-1.6.3 >=dev-libs/libgpg-error-1.17 sys-libs/ncurses:0/6= dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 kde-plasma/kwayland:5 dev-qt/qtx11extras:5 x11-libs/libX11 dev-qt/qtbase:6[gui,widgets] kde-frameworks/kguiaddons:6 kde-frameworks/kwindowsystem:6
+EAPI: 8
+IDEPEND: >=app-eselect/eselect-pinentry-0.7.4
+IUSE: caps efl emacs gtk keyring ncurses qt5 qt6 wayland X verify-sig
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris
+LICENSE: GPL-2
+MD5: 7c2f1c89d6fad46014cbfa024f07e6a6
+PATH: app-crypt/pinentry/pinentry-1.3.0-r3-3.gpkg.tar
+RDEPEND: >=dev-libs/libassuan-2.1:0/0= >=dev-libs/libgcrypt-1.6.3 >=dev-libs/libgpg-error-1.17 sys-libs/ncurses:0/6= dev-qt/qtcore:5 dev-qt/qtgui:5 dev-qt/qtwidgets:5 kde-plasma/kwayland:5 dev-qt/qtx11extras:5 x11-libs/libX11 dev-qt/qtbase:6[gui,widgets] kde-frameworks/kguiaddons:6 kde-frameworks/kwindowsystem:6 app-crypt/gcr:4[gtk] >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libKF5WaylandClient.so.5 libKF6GuiAddons.so.6 libKF6WindowSystem.so.6 libQt5Core.so.5 libQt5Gui.so.5 libQt5Widgets.so.5 libQt5X11Extras.so.5 libQt6Core.so.6 libQt6Gui.so.6 libQt6Widgets.so.6 libX11.so.6 libassuan.so.0 libc.so.6 libgcc_s.so.1 libgcr-4.so.4 libgio-2.0.so.0 libglib-2.0.so.0 libgobject-2.0.so.0 libgpg-error.so.0 libncursesw.so.6 libstdc++.so.6 libtinfow.so.6
+SHA1: 6370ef42bff3d5b10c181220f7778b26b137c8b4
+SIZE: 276480
+USE: X elibc_glibc gtk kernel_linux ncurses ppc64 qt5 qt6 wayland
+MTIME: 1727843724
 REPO: gentoo
 
 BDEPEND: sys-devel/gettext
@@ -6295,7 +6338,6 @@ KEYWORDS: amd64 arm arm64 ~loong ppc64 ~riscv x86
 LICENSE: LGPL-2.1
 MD5: 2df3b10bc7193dfadce5fb359d804877
 PATH: dev-libs/plasma-wayland-protocols/plasma-wayland-protocols-1.13.0-1.gpkg.tar
-REPO_REVISIONS: {}
 SHA1: 50823c37d009b54cb8979d17fec8ad8ff3fe0a1d
 SIZE: 71680
 USE: elibc_glibc kernel_linux ppc64
@@ -6479,6 +6521,26 @@ SHA1: 67f4d6b17d30646bc709280e387b517ed1fc5ebb
 SIZE: 51200
 USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719371972
+REPO: gentoo
+
+BDEPEND: dev-perl/Digest-HMAC virtual/perl-Digest-MD5 >=virtual/perl-ExtUtils-MakeMaker-6.42 >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath]
+BUILD_ID: 2
+BUILD_TIME: 1727845278
+CPV: dev-perl/Authen-SASL-2.170.0
+DEFINED_PHASES: compile configure install prepare test
+DEPEND: >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath]
+EAPI: 8
+IUSE: kerberos perl_features_debug perl_features_ithreads perl_features_quadmath test
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris
+LICENSE: || ( Artistic GPL-1+ )
+MD5: 3c54d6a07712182a03d1178db5eed262
+PATH: dev-perl/Authen-SASL/Authen-SASL-2.170.0-2.gpkg.tar
+RDEPEND: dev-perl/Digest-HMAC virtual/perl-Digest-MD5 >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath] dev-lang/perl:0/5.40=
+RESTRICT: test
+SHA1: 2bc0db4a0b91e7bc09d3a5d8f2d1a761b1088293
+SIZE: 51200
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1727845295
 REPO: gentoo
 
 BDEPEND: virtual/perl-ExtUtils-MakeMaker || ( >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath] <dev-lang/perl-5.38.2-r3 )
@@ -7955,6 +8017,26 @@ SHA1: b2e1ca1314d15cbf1fc2d8a071acadf78be548f2
 SIZE: 81920
 USE: elibc_glibc kernel_linux ppc64
 MTIME: 1719366804
+REPO: gentoo
+
+BDEPEND: dev-perl/TimeDate virtual/perl-IO >=virtual/perl-libnet-1.50.0 virtual/perl-ExtUtils-MakeMaker >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath]
+BUILD_ID: 2
+BUILD_TIME: 1727845769
+CPV: dev-perl/MailTools-2.210.0
+DEFINED_PHASES: compile configure install prepare test
+DEPEND: >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath]
+EAPI: 8
+IUSE: perl_features_debug perl_features_ithreads perl_features_quadmath test examples
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris
+LICENSE: || ( Artistic GPL-1+ )
+MD5: 83fa223c6d57c4d7ddf173a91d6e5db7
+PATH: dev-perl/MailTools/MailTools-2.210.0-2.gpkg.tar
+RDEPEND: dev-perl/TimeDate virtual/perl-IO >=virtual/perl-libnet-1.50.0 >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath] dev-lang/perl:0/5.40=
+RESTRICT: test
+SHA1: 364ff13be4703c25864b743e3662a6f9c4d1647e
+SIZE: 81920
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1727845778
 REPO: gentoo
 
 BDEPEND: >=virtual/perl-CPAN-Meta-2.142.60 virtual/perl-Data-Dumper >=virtual/perl-ExtUtils-CBuilder-0.270.0 virtual/perl-ExtUtils-Install virtual/perl-ExtUtils-Manifest virtual/perl-ExtUtils-MakeMaker >=virtual/perl-ExtUtils-ParseXS-2.210.0 >=virtual/perl-File-Spec-0.820.0 virtual/perl-Getopt-Long >=virtual/perl-Module-Metadata-1.0.2 >=virtual/perl-Perl-OSType-1 >=virtual/perl-Test-Harness-3.290.0 virtual/perl-Text-ParseWords >=virtual/perl-podlators-2.1.0 >=virtual/perl-version-0.870.0 || ( >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath] <dev-lang/perl-5.38.2-r3 )
@@ -11131,6 +11213,29 @@ USE: assistant elibc_glibc kernel_linux linguist llvm_slot_18 opengl ppc64 qdbus
 MTIME: 1724878714
 REPO: gentoo
 
+BDEPEND: app-alternatives/ninja >=dev-build/cmake-3.20.5 dev-lang/perl virtual/pkgconfig
+BUILD_ID: 2
+BUILD_TIME: 1727840583
+CPV: dev-qt/qttools-6.7.2
+DEFINED_PHASES: compile configure install postinst prepare setup test unpack
+DEPEND: ~dev-qt/qtbase-6.7.2:6[network,widgets] ~dev-qt/qtbase-6.7.2:6[sql,sqlite] ~dev-qt/qtbase-6.7.2:6[dbus,xml] ~dev-qt/qtdeclarative-6.7.2:6[widgets] ~dev-qt/qtbase-6.7.2:6[opengl]
+EAPI: 8
+IUSE: +assistant clang designer distancefieldgenerator gles2-only +linguist opengl pixeltool +qdbus qdoc qml qtattributionsscanner qtdiag qtplugininfo vulkan +widgets zstd +llvm_slot_18 llvm_slot_15 llvm_slot_16 llvm_slot_17
+KEYWORDS: amd64 arm arm64 ~hppa ~loong ppc ppc64 ~riscv ~sparc x86
+LICENSE: || ( GPL-2 GPL-3 LGPL-3 ) FDL-1.3
+MD5: 29aa2fbeeeb3a77916afbf91856bd0f7
+PATH: dev-qt/qttools/qttools-6.7.2-2.gpkg.tar
+PROVIDES: ppc_64: libQt6Help.so.6 libQt6UiTools.so.6
+RDEPEND: ~dev-qt/qtbase-6.7.2:6[network,widgets] ~dev-qt/qtbase-6.7.2:6[sql,sqlite] ~dev-qt/qtbase-6.7.2:6[dbus,xml] ~dev-qt/qtdeclarative-6.7.2:6[widgets] ~dev-qt/qtbase-6.7.2:6[opengl] >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libQt6Core.so.6 libQt6DBus.so.6 libQt6Gui.so.6 libQt6Network.so.6 libQt6OpenGLWidgets.so.6 libQt6PrintSupport.so.6 libQt6Qml.so.6 libQt6Sql.so.6 libQt6Widgets.so.6 libQt6Xml.so.6 libc.so.6 libgcc_s.so.1 libm.so.6 libstdc++.so.6
+RESTRICT: test
+SHA1: 77c2627e36766b575db21a9946ba27becd909de9
+SIZE: 2703360
+SLOT: 6/6.7.2
+USE: assistant elibc_glibc kernel_linux linguist llvm_slot_18 opengl ppc64 qdbus qml vulkan widgets zstd
+MTIME: 1727840595
+REPO: gentoo
+
 BDEPEND: ~dev-qt/qttools-6.7.2:6[linguist] app-alternatives/ninja >=dev-build/cmake-3.20.5 dev-lang/perl virtual/pkgconfig
 BUILD_ID: 1
 BUILD_TIME: 1724878869
@@ -11705,6 +11810,28 @@ USE: blksha1 curl elibc_glibc gpg iconv kernel_linux nls pcre perl ppc64 python_
 MTIME: 1719385050
 REPO: gentoo
 
+BDEPEND: sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1727847037
+CPV: dev-vcs/git-2.45.2
+DEFINED_PHASES: compile configure install postinst prepare setup test unpack
+DEPEND: dev-libs/openssl:0/3= sys-libs/zlib net-misc/curl dev-libs/expat virtual/libiconv dev-libs/libpcre2:0/3= dev-lang/perl:0/5.40=[-build(-)]
+EAPI: 8
+IUSE: +blksha1 +curl cgi doc keyring +gpg highlight +iconv mediawiki +nls +pcre perforce +perl +safe-directory selinux subversion tk +webdav xinetd cvs test python_single_target_python3_10 python_single_target_python3_11 python_single_target_python3_12 python_single_target_python3_13
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~amd64-linux ~x86-linux ~arm64-macos ~ppc-macos ~x64-macos ~x64-solaris
+LICENSE: GPL-2
+MD5: 21b6171579e349249a279184c2af4808
+PATH: dev-vcs/git/git-2.45.2-1.gpkg.tar
+RDEPEND: dev-libs/openssl:0/3= sys-libs/zlib net-misc/curl dev-libs/expat virtual/libiconv dev-libs/libpcre2:0/3= dev-lang/perl:0/5.40=[-build(-)] app-crypt/gnupg dev-perl/Error dev-perl/MailTools dev-perl/Authen-SASL >=virtual/perl-libnet-3.110.0-r4[ssl] >=sys-libs/glibc-2.39-r6
+REPO_REVISIONS: {}
+REQUIRES: ppc_64: libc.so.6 libcrypto.so.3 libcurl.so.4 libexpat.so.1 libpcre2-8.so.0 libssl.so.3 libz.so.1
+RESTRICT: test
+SHA1: 2f29d1baa4f009f1d33c4a041ac17263377a92c7
+SIZE: 19476480
+USE: blksha1 curl elibc_glibc gpg iconv kernel_linux nls pcre perl ppc64 python_single_target_python3_12 safe-directory webdav
+MTIME: 1727847116
+REPO: gentoo
+
 BDEPEND: app-text/docbook-xml-dtd:4.2 app-text/docbook-xsl-stylesheets dev-libs/libxslt dev-util/gdbus-codegen >=sys-devel/gettext-0.19.8 virtual/pkgconfig app-arch/xz-utils >=dev-build/meson-1.2.3 app-alternatives/ninja dev-build/meson-format-array virtual/pkgconfig
 BUILD_ID: 1
 BUILD_TIME: 1718205921
@@ -12215,6 +12342,76 @@ USE: elibc_glibc kernel_linux ppc64
 MTIME: 1727831342
 REPO: gentoo
 
+BDEPEND: >=dev-qt/qtwayland-6.6.2:6 app-alternatives/ninja >=dev-build/cmake-3.20.5 dev-qt/qttools:6[assistant] dev-libs/libpcre2:* >=kde-frameworks/extra-cmake-modules-6.5:*
+BUILD_ID: 1
+BUILD_TIME: 1727840904
+CPV: kde-frameworks/kguiaddons-6.5.0-r1
+DEFINED_PHASES: compile configure install nofetch postinst postrm preinst prepare setup test unpack
+DEPEND: >=dev-qt/qtbase-6.6.2:6[dbus,gui] dev-libs/wayland >=dev-qt/qtbase-6.6.2:6/6.7.2=[wayland] >=dev-qt/qtwayland-6.6.2:6 >=dev-qt/qtbase-6.6.2:6[X] x11-libs/libX11 >=dev-libs/plasma-wayland-protocols-1.11.1 x11-base/xorg-proto x11-libs/libxcb dev-qt/qtbase:6
+EAPI: 8
+IDEPEND: dev-util/desktop-file-utils x11-misc/shared-mime-info
+IUSE: dbus wayland X debug doc test
+KEYWORDS: amd64 arm64 ppc64 ~riscv ~x86
+LICENSE: LGPL-2+
+MD5: 697188f039f6f5df789a5a0f8da5f28b
+PATH: kde-frameworks/kguiaddons/kguiaddons-6.5.0-r1-1.gpkg.tar
+PROVIDES: ppc_64: libKF6GuiAddons.so.6
+RDEPEND: >=dev-qt/qtbase-6.6.2:6[dbus,gui] dev-libs/wayland >=dev-qt/qtbase-6.6.2:6/6.7.2=[wayland] >=dev-qt/qtwayland-6.6.2:6 >=dev-qt/qtbase-6.6.2:6[X] x11-libs/libX11 !kde-frameworks/kguiaddons:5[-kf6compat(-)] || ( kde-frameworks/breeze-icons:* kde-frameworks/oxygen-icons:* ) >=kde-frameworks/kf-env-6 dev-qt/qtbase:6 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libQt6Core.so.6 libQt6DBus.so.6 libQt6Gui.so.6 libQt6WaylandClient.so.6 libX11.so.6 libc.so.6 libm.so.6 libstdc++.so.6 libwayland-client.so.0
+RESTRICT: test
+SHA1: 3d072c96f5a5d3504b03518bc7455d6d1d65206f
+SIZE: 215040
+SLOT: 6/6.5
+USE: X dbus elibc_glibc kernel_linux ppc64 wayland
+MTIME: 1727840913
+REPO: gentoo
+
+BDEPEND: >=dev-qt/qttools-6.6.2:6[linguist] app-alternatives/ninja >=dev-build/cmake-3.20.5 dev-qt/qttools:6[assistant] dev-libs/libpcre2:* >=kde-frameworks/extra-cmake-modules-6.5:*
+BUILD_ID: 1
+BUILD_TIME: 1727841308
+CPV: kde-frameworks/kwindowsystem-6.5.0-r1
+DEFINED_PHASES: compile configure install nofetch postinst postrm preinst prepare setup test unpack
+DEPEND: >=dev-qt/qtbase-6.6.2:6[gui,wayland] >=dev-qt/qtdeclarative-6.6.2:6 >=dev-qt/qtwayland-6.6.2:6/6.7.2= >=dev-qt/qtbase-6.6.2:6/6.7.2=[gui] x11-base/xorg-proto x11-libs/libX11 x11-libs/libXfixes x11-libs/libxcb x11-libs/xcb-util-keysyms dev-libs/plasma-wayland-protocols >=dev-libs/wayland-protocols-1.21 dev-qt/qtbase:6
+EAPI: 8
+IUSE: wayland X debug doc test
+KEYWORDS: amd64 arm64 ~loong ppc64 ~riscv ~x86
+LICENSE: || ( LGPL-2.1 LGPL-3 ) MIT
+MD5: d861d756aa1f75e6a24ed40e52b4ee8e
+PATH: kde-frameworks/kwindowsystem/kwindowsystem-6.5.0-r1-1.gpkg.tar
+PROVIDES: ppc_64: KF6WindowSystemKWaylandPlugin.so KF6WindowSystemX11Plugin.so libKF6WindowSystem.so.6 libKWindowSystem.so
+RDEPEND: >=dev-qt/qtbase-6.6.2:6[gui,wayland] >=dev-qt/qtdeclarative-6.6.2:6 >=dev-qt/qtwayland-6.6.2:6/6.7.2= >=dev-qt/qtbase-6.6.2:6/6.7.2=[gui] x11-base/xorg-proto x11-libs/libX11 x11-libs/libXfixes x11-libs/libxcb x11-libs/xcb-util-keysyms >=kde-frameworks/kf-env-6 dev-qt/qtbase:6 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libQt6Core.so.6 libQt6Gui.so.6 libQt6Qml.so.6 libQt6WaylandClient.so.6 libX11.so.6 libXfixes.so.3 libc.so.6 libm.so.6 libstdc++.so.6 libwayland-client.so.0 libxcb-keysyms.so.1 libxcb-res.so.0 libxcb.so.1
+RESTRICT: test test
+SHA1: 5230f61e49f4f2cefe9f9cb4710cabb2470ede64
+SIZE: 358400
+SLOT: 6/6.5
+USE: X elibc_glibc kernel_linux ppc64 wayland
+MTIME: 1727841318
+REPO: gentoo
+
+BDEPEND: >=dev-qt/qtwaylandscanner-5.15.9:5 >=dev-util/wayland-scanner-1.19.0 app-alternatives/ninja >=dev-build/cmake-3.20.5 dev-libs/libpcre2:* >=kde-frameworks/extra-cmake-modules-5.116:*
+BUILD_ID: 1
+BUILD_TIME: 1727843367
+CPV: kde-plasma/kwayland-5.116.0
+DEFINED_PHASES: compile configure install nofetch postinst postrm preinst prepare setup test unpack
+DEPEND: >=dev-libs/wayland-1.15.0 >=dev-qt/qtconcurrent-5.15.9:5 >=dev-qt/qtgui-5.15.9:5/5.15.14=[egl] >=dev-qt/qtwayland-5.15.9:5/5.15.14= media-libs/libglvnd >=dev-libs/plasma-wayland-protocols-1.9.0 >=dev-libs/wayland-protocols-1.15 sys-kernel/linux-headers dev-qt/qtcore:5
+EAPI: 8
+IUSE: debug doc test
+KEYWORDS: amd64 arm arm64 ~loong ppc64 ~riscv x86
+LICENSE: LGPL-2.1
+MD5: e56431450cbda84371337292bb7ea4f3
+PATH: kde-plasma/kwayland/kwayland-5.116.0-1.gpkg.tar
+PROVIDES: ppc_64: libKF5WaylandClient.so.5 libKF5WaylandServer.so.5
+RDEPEND: >=dev-libs/wayland-1.15.0 >=dev-qt/qtconcurrent-5.15.9:5 >=dev-qt/qtgui-5.15.9:5/5.15.14=[egl] >=dev-qt/qtwayland-5.15.9:5/5.15.14= media-libs/libglvnd >=kde-frameworks/kf-env-4 dev-qt/qtcore:5 >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libEGL.so.1 libQt5Core.so.5 libQt5Gui.so.5 libQt5WaylandClient.so.5 libc.so.6 libstdc++.so.6 libwayland-client.so.0 libwayland-server.so.0
+RESTRICT: test test
+SHA1: 76c0239f919ee5b7638f8f799702ca16703ca180
+SIZE: 808960
+SLOT: 5/5.116
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1727843376
+REPO: gentoo
+
 BDEPEND: sys-devel/gettext virtual/pkgconfig
 BUILD_ID: 1
 BUILD_TIME: 1719379509
@@ -12233,6 +12430,26 @@ SHA1: 4fd850a0b485536cf431d92ac6ddd5f2273ba364
 SIZE: 266240
 USE: elibc_glibc gnutls kernel_linux mta nls ppc64 ssl
 MTIME: 1719379550
+REPO: gentoo
+
+BDEPEND: sys-devel/gettext virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1727845648
+CPV: mail-mta/msmtp-1.8.26
+DEFINED_PHASES: compile configure install postinst prepare
+DEPEND: virtual/libintl net-libs/gnutls
+EAPI: 8
+IUSE: daemon doc keyring +gnutls idn +mta nls sasl ssl +filecaps
+KEYWORDS: ~alpha amd64 ~arm arm64 ppc ppc64 ~riscv sparc x86 ~amd64-linux ~x86-linux ~ppc-macos
+LICENSE: GPL-3
+MD5: 1af35ec2bbee10fa67b7a0c67554e8ce
+PATH: mail-mta/msmtp/msmtp-1.8.26-1.gpkg.tar
+RDEPEND: virtual/libintl net-libs/gnutls net-mail/mailbase !mail-mta/courier !mail-mta/esmtp !mail-mta/exim !mail-mta/netqmail !mail-mta/nullmailer !mail-mta/postfix !mail-mta/sendmail !mail-mta/opensmtpd !>=mail-mta/ssmtp-2.64-r2[mta] >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libgnutls.so.30 libresolv.so.2
+SHA1: 5896ddf7b031d1605ad50bdd102bfbaffdd3c55a
+SIZE: 266240
+USE: elibc_glibc gnutls kernel_linux mta nls ppc64 ssl
+MTIME: 1727845658
 REPO: gentoo
 
 BDEPEND: >=app-accessibility/at-spi2-core-2.46.0:2 >=dev-libs/glib-2.58.1:2 >=dev-libs/libxml2-2.4.7:2 gnome-base/dconf >=gnome-base/gvfs-1.10.1:0[udisks] >=mate-base/mate-desktop-1.28.0 >=media-libs/libexif-0.6.14:0 virtual/libintl x11-libs/cairo >=x11-libs/gdk-pixbuf-2.36.5:2 >=x11-libs/gtk+-3.22:3[introspection] >=x11-libs/libnotify-0.7.0:0 x11-libs/libICE x11-libs/libSM x11-libs/libX11 x11-libs/libXext x11-libs/libXft x11-libs/libXrender >=x11-libs/pango-1.1.2 >=dev-libs/gobject-introspection-0.6.4:0/0= >=dev-lang/perl-5:0/5.38= dev-util/gdbus-codegen dev-util/glib-utils dev-util/gtk-doc dev-build/gtk-doc-am >=sys-devel/gettext-0.19.8 virtual/pkgconfig >=app-portage/elt-patches-20240116 app-arch/xz-utils sys-devel/gnuconfig >=dev-build/automake-1.16.5:1.16 || ( >=dev-build/autoconf-2.72-r1:2.72 >=dev-build/autoconf-2.71-r6:2.71 ) >=dev-build/libtool-2.4.7-r3 >=mate-base/mate-common-1.28
@@ -15602,6 +15819,26 @@ USE: dbus elibc_glibc fils hs2-0 kernel_linux mbo mesh ppc64 ps3 qt5 readline
 MTIME: 1722631805
 REPO: gentoo
 
+BDEPEND: virtual/pkgconfig virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1727845671
+CPV: net-wireless/wpa_supplicant-2.10-r5
+DEFINED_PHASES: compile configure install postinst prepare setup
+DEPEND: >=dev-libs/openssl-1.0.2k:0/3= sys-apps/dbus >=dev-libs/libnl-3.2:3 sys-libs/ncurses:0/6= sys-libs/readline:0/8=
+EAPI: 8
+IUSE: ap broadcom-sta dbus eap-sim eapol-test fasteap +fils +hs2-0 macsec +mbo +mesh p2p privsep ps3 qt5 readline selinux smartcard tdls tkip uncommon-eap-types wep wimax wps
+KEYWORDS: ~alpha amd64 arm arm64 ~loong ~mips ppc ppc64 ~riscv ~sparc x86
+LICENSE: || ( GPL-2 BSD )
+MD5: 4b428b246b371bff6aad802188f70ff3
+PATH: net-wireless/wpa_supplicant/wpa_supplicant-2.10-r5-1.gpkg.tar
+RDEPEND: >=dev-libs/openssl-1.0.2k:0/3= sys-apps/dbus >=dev-libs/libnl-3.2:3 sys-libs/ncurses:0/6= sys-libs/readline:0/8= net-wireless/wireless-regdb >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libcrypto.so.3 libdbus-1.so.3 libnl-3.so.200 libnl-genl-3.so.200 libreadline.so.8 libssl.so.3
+SHA1: 45c60b53358865916d54d2dbacdc4f90e76febd6
+SIZE: 1484800
+USE: dbus elibc_glibc fils hs2-0 kernel_linux mbo mesh ppc64 ps3 readline
+MTIME: 1727845681
+REPO: gentoo
+
 BDEPEND: virtual/perl-ExtUtils-MakeMaker || ( >=dev-lang/perl-5.38.2-r3[-perl_features_debug,-perl_features_ithreads,-perl_features_quadmath] <dev-lang/perl-5.38.2-r3 )
 BUILD_ID: 1
 BUILD_TIME: 1718191237
@@ -17974,6 +18211,50 @@ USE: elibc_glibc kernel_linux ppc64
 MTIME: 1724878293
 REPO: gentoo
 
+BDEPEND: app-text/asciidoc app-text/docbook-xml-dtd:4.5 >=app-text/docbook-xsl-stylesheets-1.75.2 >=dev-libs/libxslt-1.1.26 virtual/pkgconfig virtual/pkgconfig
+BUILD_ID: 1
+BUILD_TIME: 1727845328
+CPV: sys-kernel/dracut-103-r4
+DEFINED_PHASES: configure install postinst test
+DEPEND: >=sys-apps/kmod-23
+EAPI: 8
+IUSE: selinux test
+KEYWORDS: ~alpha amd64 arm arm64 ~hppa ~loong ~mips ppc ppc64 ~riscv sparc x86
+LICENSE: GPL-2
+MD5: 4e003e20d195931fb4b379916df75f17
+PATH: sys-kernel/dracut/dracut-103-r4-1.gpkg.tar
+RDEPEND: app-alternatives/cpio >=app-shells/bash-4.0:0 sys-apps/coreutils[xattr(-)] >=sys-apps/kmod-23[tools] || ( >=sys-apps/sysvinit-2.87-r3 sys-apps/openrc[sysv-utils(-)] sys-apps/openrc-navi[sysv-utils(-)] sys-apps/systemd[sysv-utils] sys-apps/s6-linux-init[sysv-utils(-)] ) >=sys-apps/util-linux-2.21 virtual/pkgconfig[native-symlinks(+)] virtual/udev >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6 libkmod.so.2
+RESTRICT: test
+SHA1: 7139ccfd7c68554aa453d8c3cc254b866258a761
+SIZE: 491520
+USE: elibc_glibc kernel_linux ppc64
+MTIME: 1727845339
+REPO: gentoo
+
+BDEPEND: || ( dev-lang/python:3.13 dev-lang/python:3.12 dev-lang/python:3.11 dev-lang/python:3.10 ) app-alternatives/cpio app-alternatives/bc dev-lang/perl sys-devel/bison sys-devel/flex virtual/libelf
+BUILD_ID: 1
+BUILD_TIME: 1727846272
+CPV: sys-kernel/gentoo-kernel-ps3-6.6.51
+DEFINED_PHASES: compile config configure install postinst postrm preinst prepare pretend setup test
+EAPI: 8
+IDEPEND: || ( >=sys-kernel/installkernel-14[dracut(-)] >=sys-kernel/installkernel-14[ugrd(-)] )
+IUSE: debug experimental hardened X secureboot savedconfig +initramfs test generic-uki modules-compress +strip modules-sign
+KEYWORDS: amd64 ~arm arm64 ~hppa ~loong ~ppc ppc64 ~riscv ~sparc x86
+LICENSE: GPL-2
+MD5: 29e6dc0aa66f07fe7a18c0747871fecf
+PATH: sys-kernel/gentoo-kernel-ps3/gentoo-kernel-ps3-6.6.51-1.gpkg.tar
+PROVIDES: ppc_32: linux-vdso32.so.1 ppc_64: linux-vdso64.so.1
+RDEPEND: !sys-kernel/gentoo-kernel-bin:6.6.51 sys-apps/kmod[lzma] virtual/libelf >=sys-libs/glibc-2.39-r6
+REQUIRES: ppc_64: libc.so.6
+RESTRICT: test
+SHA1: ab2c6df35e25cbf3e7e8bfd5c744c37c8aee1c11
+SIZE: 24995840
+SLOT: 6.6.51
+USE: elibc_glibc initramfs kernel_linux ppc64 strip
+MTIME: 1727846312
+REPO: ps3
+
 BUILD_ID: 1
 BUILD_TIME: 1719381615
 CPV: sys-kernel/installkernel-38
@@ -18023,6 +18304,23 @@ SHA1: 3a5da5f125c16d48fefd5f0ea6389689de3427fe
 SIZE: 40960
 USE: dracut elibc_glibc kernel_linux ppc64
 MTIME: 1720811373
+REPO: gentoo
+
+BUILD_ID: 1
+BUILD_TIME: 1727845483
+CPV: sys-kernel/installkernel-48-r1
+DEFINED_PHASES: install postinst setup
+EAPI: 8
+IUSE: dracut efistub grub refind systemd systemd-boot ugrd uki ukify
+KEYWORDS: ~alpha amd64 arm arm64 hppa ~loong ~m68k ~mips ppc ppc64 ~riscv ~s390 sparc x86 ~x86-linux
+LICENSE: GPL-2+
+MD5: 1fb576ffd6bddf25554b16395ccf7b11
+PATH: sys-kernel/installkernel/installkernel-48-r1-1.gpkg.tar
+RDEPEND: !<=sys-kernel/installkernel-systemd-3 >=sys-kernel/dracut-060_pre20240104-r4 !=sys-apps/systemd-255.2-r1 !=sys-apps/systemd-255.2-r0 !~sys-apps/systemd-255.1 !~sys-apps/systemd-255.0 !=sys-apps/systemd-254.8-r0 !=sys-apps/systemd-254.7-r0 !~sys-apps/systemd-254.6 !<=sys-apps/systemd-254.5-r1
+SHA1: 3507421c999a743d8096827bbdca9e3434c9d637
+SIZE: 40960
+USE: dracut elibc_glibc kernel_linux ppc64
+MTIME: 1727845506
 REPO: gentoo
 
 BDEPEND: app-arch/xz-utils dev-lang/perl
@@ -23657,5 +23955,4 @@ SIZE: 440320
 USE: elibc_glibc elogind kernel_linux locking opengl pam ppc64
 MTIME: 1722641510
 REPO: gentoo
-
 
